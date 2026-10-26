@@ -1,0 +1,11 @@
+CONTRACT fields: ['Do-Nots', 'Output', 'Role', 'Signal']
+LINT good contract: CLEAN
+LINT bad contract: ['MISSING:Do-Nots', 'WEAK_SIGNAL:signal is a common prose word', 'VAGUE_OUTPUT:no table/schema/json shape named']
+| party | duty | deadline |
+|---|---|---|
+| Supplier | deliver monthly uptime report | 5th business day |
+| Client | pay undisputed invoices | 30 days from invoice |
+| Supplier | notify of security incidents | 24 hours from discovery |
+| Both | review service levels jointly | quarterly |
+EXTRACTION COMPLETE
+TERMINATION: SIGNAL

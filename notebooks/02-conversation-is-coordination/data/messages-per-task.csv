@@ -1,0 +1,7 @@
+label,"MEASURED - from runs/run-01.txt + transcript-01.jsonl, synthetic transactions"
+task,messages,findings
+totals-by-category,2,0
+unused-charge hunt,2,1
+subscription-count change,2,1
+overlap check,2,1
+findings + signal,4,0

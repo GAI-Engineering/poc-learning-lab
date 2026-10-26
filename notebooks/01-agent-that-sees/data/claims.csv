@@ -1,0 +1,15 @@
+label,"MEASURED - from runs/run-01.json, synthetic scenes"
+scene,region,claim,confidence,flag,verified
+pavement-01,top-left,pavement slab,0.97,GROUNDED,True
+pavement-01,centre,"crack, 18mm at widest",0.91,GROUNDED,True
+pavement-01,centre-right,"raised edge, trip hazard",0.84,GROUNDED,True
+pavement-01,bottom,drain cover,0.95,GROUNDED,True
+pavement-01,top-right (occluded),possible bollard base,0.42,GUESS,False
+entrance-02,centre,"step, no ramp",0.93,GROUNDED,True
+entrance-02,left,"handrail, one side only",0.88,GROUNDED,True
+entrance-02,right,"door, manual, heavy",0.71,GROUNDED,True
+entrance-02,top (small print),sign text unreadable,0.35,GUESS,False
+crossing-03,centre,dropped kerb present,0.96,GROUNDED,True
+crossing-03,left,tactile paving,0.9,GROUNDED,True
+crossing-03,right,parked bicycle obstructing kerb,0.78,GROUNDED,True
+crossing-03,far side (occluded),possible second obstruction,0.48,GUESS,False

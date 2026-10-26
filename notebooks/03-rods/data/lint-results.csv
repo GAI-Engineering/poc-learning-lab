@@ -1,0 +1,4 @@
+label,MEASURED - from runs/run-01.txt
+contract,lint_result
+good RODS contract,CLEAN
+bad contract,MISSING:Do-Nots; WEAK_SIGNAL; VAGUE_OUTPUT

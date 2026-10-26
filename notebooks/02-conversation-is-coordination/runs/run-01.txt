@@ -1,0 +1,4 @@
+messages=12 findings=3 transcript=transcript-01.jsonl
+FINDING 1: gym-unused charges $78.00 across Feb-Mar with no activity signal - owner did not ask about this.
+FINDING 2: coffee-subscription billed 3x in March vs 2x in Jan/Feb - a duplicate charge pattern.
+FINDING 3: a second streaming subscription (streaming-b) started in March - possible duplicate service.

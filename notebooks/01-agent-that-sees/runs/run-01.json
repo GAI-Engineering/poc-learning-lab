@@ -1,0 +1,111 @@
+{
+  "claims": [
+    {
+      "scene": "pavement-01",
+      "region": "top-left",
+      "claim": "pavement slab",
+      "confidence": 0.97,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "pavement-01",
+      "region": "centre",
+      "claim": "crack, 18mm at widest",
+      "confidence": 0.91,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "pavement-01",
+      "region": "centre-right",
+      "claim": "raised edge, trip hazard",
+      "confidence": 0.84,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "pavement-01",
+      "region": "bottom",
+      "claim": "drain cover",
+      "confidence": 0.95,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "pavement-01",
+      "region": "top-right (occluded)",
+      "claim": "possible bollard base",
+      "confidence": 0.42,
+      "flag": "GUESS",
+      "verified": false
+    },
+    {
+      "scene": "entrance-02",
+      "region": "centre",
+      "claim": "step, no ramp",
+      "confidence": 0.93,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "entrance-02",
+      "region": "left",
+      "claim": "handrail, one side only",
+      "confidence": 0.88,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "entrance-02",
+      "region": "right",
+      "claim": "door, manual, heavy",
+      "confidence": 0.71,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "entrance-02",
+      "region": "top (small print)",
+      "claim": "sign text unreadable",
+      "confidence": 0.35,
+      "flag": "GUESS",
+      "verified": false
+    },
+    {
+      "scene": "crossing-03",
+      "region": "centre",
+      "claim": "dropped kerb present",
+      "confidence": 0.96,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "crossing-03",
+      "region": "left",
+      "claim": "tactile paving",
+      "confidence": 0.9,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "crossing-03",
+      "region": "right",
+      "claim": "parked bicycle obstructing kerb",
+      "confidence": 0.78,
+      "flag": "GROUNDED",
+      "verified": true
+    },
+    {
+      "scene": "crossing-03",
+      "region": "far side (occluded)",
+      "claim": "possible second obstruction",
+      "confidence": 0.48,
+      "flag": "GUESS",
+      "verified": false
+    }
+  ],
+  "total": 13,
+  "survived": 10,
+  "survival_rate": 0.769
+}
