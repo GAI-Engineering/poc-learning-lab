@@ -29,7 +29,8 @@ these only from real pilot runs, never by editing this file's labels.*
   EXTRACTION COMPLETE (check returned SIGNAL, never a prose word)
 
 ## The executive layer
-- Infographics (SVG sources, this folder): infographic-01-sees ·
-  infographic-02-conversation · infographic-03-rods — one CTO conclusion each
+- Infographics (this folder): the CTO renders generated in NotebookLM
+  (infographic-01-sees.png · infographic-02-conversation.png ·
+  infographic-03-rods.png) + SVG text sources beside them — one CTO conclusion each
 - Business case: business/BUSINESS-CASE.md · Deck: business/POC-BUSINESS-CASE-DECK
 - Concept diagrams: diagrams/CONCEPT-DIAGRAMS.md · Technical flows: diagrams/TECHNICAL-FLOWS.md
