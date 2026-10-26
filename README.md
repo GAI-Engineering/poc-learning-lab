@@ -8,9 +8,9 @@ Every notebook began as a teaching post in the series *Agents That See · Agents
 
 | # | Notebook | The idea to steal | Status |
 |---|----------|-------------------|--------|
-| 01 | An Agent That Sees | The Confidence Map | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ, view-only share); GitHub push pending (see ROADMAP) |
-| 02 | Conversation Is a Coordination Primitive | The Transcript Is the Database | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ, view-only share); GitHub push pending (see ROADMAP) |
-| 03 | RODS: Four Lines Every Agent Needs | Contracts Before Capabilities | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ, view-only share); GitHub push pending (see ROADMAP) |
+| 01 | An Agent That Sees | The Confidence Map | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ in NotebookLM — a Google sign-in is required to view them); live on GitHub since 2026-10-26 (see ROADMAP) |
+| 02 | Conversation Is a Coordination Primitive | The Transcript Is the Database | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ in NotebookLM — a Google sign-in is required to view them); live on GitHub since 2026-10-26 (see ROADMAP) |
+| 03 | RODS: Four Lines Every Agent Needs | Contracts Before Capabilities | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ in NotebookLM — a Google sign-in is required to view them); live on GitHub since 2026-10-26 (see ROADMAP) |
 | 04 | The Analyst–Executor Loop | The Error Is the Curriculum | Planned — Day 2 |
 | 05 | Three Ways to Run a Group Chat | Choose Your Parliament | Planned — Day 2 |
 | 06 | The Debate Pattern | Disagreement Is a Sensor | Planned — Day 2 |
@@ -29,8 +29,8 @@ Every notebook began as a teaching post in the series *Agents That See · Agents
 ## How to use this lab
 
 - Each folder under `notebooks/` is self-contained: a README summary, the source pack the study notebook was built from, the data tables, the charts, and three study artifacts (briefing, study guide, FAQ).
-- Data and charts are labelled **MEASURED** (from runs we executed and recorded) or **ILLUSTRATIVE** (worked examples that teach the pattern). They are never blended.
-- Comment and question in **Discussions** — one thread per notebook, seeded with its community question. Corrections are welcome; evidence wins arguments here.
+- Data and charts are labelled **MEASURED** (from runs we executed and recorded) or **ILLUSTRATIVE** (worked examples that teach the pattern). They are never blended. The Day 1 builds (01–03) are scripted demonstrations — their outputs are ILLUSTRATIVE by that rule, including where a script executes for real over synthetic data.
+- Corrections are welcome — open an Issue on this repo; evidence wins arguments here. (GitHub Discussions are not enabled on this repo.)
 
 ## License
 

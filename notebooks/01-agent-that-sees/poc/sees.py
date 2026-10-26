@@ -28,7 +28,8 @@ SCENES = [
     ]},
 ]
 # Human verification on the synthetic ground truth (recorded for this run):
-VERIFIED = {  # (scene, region) -> True if claim survives human check
+VERIFIED = {  # SCRIPTED demonstration outcomes, fixed for the worked example —
+# not measured. (scene, region) -> True if claim survives human check
     ("pavement-01", "top-left"): True, ("pavement-01", "centre"): True,
     ("pavement-01", "centre-right"): True, ("pavement-01", "bottom"): True,
     ("pavement-01", "top-right (occluded)"): False,
