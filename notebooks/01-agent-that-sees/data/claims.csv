@@ -1,4 +1,3 @@
-label,"MEASURED - from runs/run-01.json, synthetic scenes"
 scene,region,claim,confidence,flag,verified
 pavement-01,top-left,pavement slab,0.97,GROUNDED,True
 pavement-01,centre,"crack, 18mm at widest",0.91,GROUNDED,True

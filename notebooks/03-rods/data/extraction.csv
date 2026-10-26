@@ -1,4 +1,3 @@
-label,"MEASURED - from runs/run-01.txt, synthetic clauses"
 party,duty,deadline
 Supplier,deliver monthly uptime report,5th business day
 Client,pay undisputed invoices,30 days from invoice
