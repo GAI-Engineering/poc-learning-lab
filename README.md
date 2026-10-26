@@ -1,3 +1,6 @@
+<p align="center"><img src="assets/gai-observe-logo.png" alt="GAI Observe LLC" width="200"></p>
+<p align="center"><em>GAI OBSERVE LLC · POC LEARNING LAB</em></p>
+
 # POC Learning Lab — Agents That See · Agents That Talk
 
 A public learning lab from **GAI Observe LLC**: fifteen proof-of-concept builds for multi-agent systems that perceive the world and coordinate in conversation — plus two data studies. Each POC is implemented here as a runnable reference build with its recorded runs, and documented as a study notebook with its sources, data, charts and learning evidence.
