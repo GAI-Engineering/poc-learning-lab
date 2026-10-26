@@ -7,8 +7,8 @@
 ## Why this lab exists, in business terms
 Most agent projects do not fail on model quality. They fail on trust:
 claims nobody can trace, state nobody can audit, and behaviour nobody
-contracted for. The three patterns in this lab are the cheapest known
-controls for those three failure modes — each demonstrated by a small,
+contracted for. The three patterns in this lab are, in our assessment, among the
+cheapest effective controls for those three failure modes — each demonstrated by a small,
 runnable, public reference implementation an executive team can inspect
 before it funds anything.
 
@@ -38,7 +38,7 @@ transcript; the transcript *is* the state — replayable, auditable,
 with no side channels.
 **The money:** coordination failures in operations are usually
 *provenance* failures — nobody can reconstruct who decided what, from
-which data. A transcript-of-record removes the reconstruction cost from
+which data. A transcript-of-record collapses the reconstruction cost in
 every audit, dispute and incident review, and makes agent work
 supervisable by ordinary management tools.
 **Where it applies:**
@@ -53,8 +53,8 @@ Output, Do-Nots, Signal — checked mechanically (linted) before runtime,
 and terminated on a typed signal, never a prose word.
 **The money:** incidents with agents are disproportionately contract
 incidents: scope the agent invented, output shapes downstream systems
-could not consume, runs that never cleanly ended. A lintable contract is
-the cheapest control in this entire field — it costs four lines and a
+could not consume, runs that never cleanly ended. A lintable contract is,
+in our assessment, the cheapest control in this field — it costs four lines and a
 checker, and it prices agent risk *before* deployment.
 **Where it applies:**
 - Telecom & utilities: regulated customer operations, SLA extraction.
