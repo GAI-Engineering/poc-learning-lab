@@ -1,0 +1,8 @@
+attempt 1: ERROR - Total spend by category
+attempt 2: SUCCESS - Print the schema first (the recovery habit)
+attempt 3: SUCCESS - Total spend by category (revised: key is 'amount')
+attempt 4: EMPTY - Monthly charges for category 'gym'
+attempt 5: SUCCESS - Monthly charges for 'gym-unused' (exact name from the totals)
+attempts=5 errors=1 empty=1 successes=3 transcript=transcript-01.jsonl
+FINDING: gym-unused totals $78.00 across Feb-Mar with no activity category in the export - the loop's top leak, traced to actual rows.
+TERMINATION: SIGNAL
