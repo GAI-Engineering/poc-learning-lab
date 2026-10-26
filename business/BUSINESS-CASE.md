@@ -4,6 +4,36 @@
 ▸ GAI OBSERVE LLC · POC LEARNING LAB — executive brief, 2026-10-26
 *Lean edition: the pattern, the money, the industries, the path from demo to deployment.*
 
+## Lead with the data — the market, and the failure curve
+**The market (third-party forecasts, cited — not our numbers):**
+- Enterprise agentic AI: **USD 2.6B in 2024 → USD 24.5B by 2030**,
+  CAGR 46.2%; North America held 39% in 2024, and customer service /
+  virtual assistants were the leading application segment
+  (Grand View Research, Enterprise Agentic AI Market Report, 2025–2030).
+- Forecasts vary by definition — other firms put 2030 between ~USD 25B
+  and ~USD 53B (Omdia: USD 1.5B in 2025 → USD 41.8B in 2030 for
+  enterprise agentic AI *software*). Treat any single figure as a
+  range with a name on it, never as a promise.
+- Adoption: Gartner (Aug 2025) predicts **40% of enterprise
+  applications will feature task-specific AI agents by end of 2026**,
+  up from under 5% in 2025; by 2029 at least 50% of knowledge workers
+  will develop skills to work with, govern or create agents.
+
+**The failure curve (why this lab leads with controls, not demos):**
+Gartner (June 2025) also predicts **over 40% of agentic AI projects
+will be canceled by end of 2027** — for escalating costs, unclear
+business value, and inadequate risk controls. Not model quality:
+economics and governance. The three patterns below are aimed at
+exactly those three causes — a verification loop prices value, a
+transcript-of-record is the audit control, and a linted contract is
+the cheapest risk control in the stack.
+
+**Our data (separate ledger, always labelled):** everything this lab
+has produced so far is ILLUSTRATIVE — scripted demonstrations over
+synthetic data (see the honesty note in the patterns and
+KEY-DATA-POINTS.md). Market figures are other people's, cited;
+pilot figures will be ours only when a real pilot runs.
+
 ## Why this lab exists, in business terms
 Most agent projects do not fail on model quality. They fail on trust:
 claims nobody can trace, state nobody can audit, and behaviour nobody
@@ -78,3 +108,13 @@ The reference implementations are free (MIT / CC BY 4.0) and run
 offline. The real cost of step 2 is people-time: one business owner,
 one engineer, and checker hours for the verification loop. That is the
 lean start: evidence first, platform spend after the numbers exist.
+
+## Sources (market section)
+- Grand View Research — Enterprise Agentic AI Market Report 2025–2030:
+  https://Www.grandviewresearch.com/industry-analysis/enterprise-agentic-ai-market-report
+- Gartner press release, 2025-08-26 — 40% of enterprise apps to feature
+  task-specific AI agents by 2026:
+  https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025
+- Omdia — Enterprise Agentic AI Software Market Forecast (Sep 2025):
+  https://omdia.tech.informa.com/pr/2025/sep/new-omdia-analysis-shows-agentic-ai-outpacing-growth-rates-of-traditional-generative-ai
+- Gartner cancellation prediction (June 2025), as widely reported.
