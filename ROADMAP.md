@@ -12,3 +12,5 @@ Built in daily batches of three notebooks, 2026-10-25 → 2026-10-29, with stret
 | — | Fri–Sat 2026-10-30/31 | Stretch: 16 Claims MAS evaluation · 17 A2A lineage + week-one update | Not started |
 
 Daily close-out: folders committed, index updated, one announcement post, progress noted.
+
+2026-10-26 — Sam 4 Lab QA fix list (D-A..D-G) applied: data files hold data only, scripted demos ILLUSTRATIVE throughout, notebooks re-executed headless with full evidence tables and charts. Day 1 promotion awaits Sam 4's RELEASED sign under the release gate (REL-1).
