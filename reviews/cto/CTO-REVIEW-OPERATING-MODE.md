@@ -18,7 +18,13 @@
 4. **Two verdicts, always separated.** A release can PASS as a
    learning artefact while standing HOLD as evidence of capability
    or value. The two are never merged into one word.
-5. **Public-safe copies live here.** Internal working papers stay in
+5. **Findings are classified.** Every finding is labelled VERIFIED
+   (checked against evidence in the session), REPORTED (taken from a
+   named source, not re-checked), or INFERRED (the reviewer's
+   judgement) — and the action register carries the class with the
+   finding. Acceptance of a fix is by independent replay where the
+   session requires it, never by the fixer's own report.
+6. **Public-safe copies live here.** Internal working papers stay in
    the programme's internal exchange; what a public reader needs —
    the verdict, the conditions, the disposition — is filed in
    reviews/cto/ in the repository itself.
