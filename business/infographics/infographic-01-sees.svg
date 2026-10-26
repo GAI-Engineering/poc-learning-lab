@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+<rect width="1200" height="1500" fill="#F7FAFA"/>
+<rect width="1200" height="170" fill="#1A1A2E"/>
+<rect y="170" width="1200" height="8" fill="#C9A227"/>
+<text x="90" y="85" font-size="34" letter-spacing="4" fill="#C9A227">GAI OBSERVE LLC · POC LEARNING LAB</text>
+<text x="90" y="140" font-size="30" fill="#FFFFFF">POC 01 · CTO CONCLUSIONS</text>
+<text x="90" y="265" font-size="47" font-weight="700" fill="#1A1A2E">An Agent That Sees</text>
+<text x="90" y="325" font-size="29" fill="#22303A">Grounded perception + a verification loop</text>
+<text x="90" y="385" font-size="24" letter-spacing="3" fill="#C9A227">KEY DATA POINTS · SCRIPTED DEMONSTRATION (ILLUSTRATIVE)</text>
+<text x="90" y="430" font-size="72" font-weight="700" fill="#1B9AAA">13 claims</text><text x="90" y="472" font-size="27" fill="#22303A">region-grounded, each with a confidence</text><text x="90" y="580" font-size="72" font-weight="700" fill="#1B9AAA">10 / 13 survived</text><text x="90" y="622" font-size="27" fill="#22303A">survival rate 0.769 against ground truth</text><text x="90" y="730" font-size="72" font-weight="700" fill="#1B9AAA">3 flagged = 3 failed</text><text x="90" y="772" font-size="27" fill="#22303A">every GUESS (below 0.60) failed the check — by construction in the demo</text><text x="90" y="880" font-size="72" font-weight="700" fill="#1B9AAA">0 hidden</text><text x="90" y="922" font-size="27" fill="#22303A">low confidence is flagged, never buried</text>
+<rect x="60" y="1040" width="1080" height="240" fill="#1A1A2E"/>
+<text x="90" y="1100" font-size="26" letter-spacing="3" fill="#C9A227">THE CTO CONCLUSION</text>
+<text x="90" y="1155" font-size="31" fill="#FFFFFF">Perception without a verification loop is unpriced risk.</text>
+<text x="90" y="1200" font-size="31" fill="#FFFFFF">The survival rate is the price tag — demand it before scale.</text>
+<text x="90" y="1350" font-size="28" font-weight="600" fill="#1B9AAA">Run it as a measured pilot: your scenes, human checkers, one site.</text>
+<text x="90" y="1450" font-size="22" fill="#66707A">Full notebook, code and evidence: github.com/GAI-Engineering/poc-learning-lab · MIT / CC BY 4.0 · Synthetic data only</text>
+</svg>

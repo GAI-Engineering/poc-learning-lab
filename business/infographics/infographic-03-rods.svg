@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+<rect width="1200" height="1500" fill="#F7FAFA"/>
+<rect width="1200" height="170" fill="#1A1A2E"/>
+<rect y="170" width="1200" height="8" fill="#C9A227"/>
+<text x="90" y="85" font-size="34" letter-spacing="4" fill="#C9A227">GAI OBSERVE LLC · POC LEARNING LAB</text>
+<text x="90" y="140" font-size="30" fill="#FFFFFF">POC 03 · CTO CONCLUSIONS</text>
+<text x="90" y="265" font-size="47" font-weight="700" fill="#1A1A2E">RODS — Contract Before Capability</text>
+<text x="90" y="325" font-size="29" fill="#22303A">Four lines, linted before the agent runs</text>
+<text x="90" y="385" font-size="24" letter-spacing="3" fill="#C9A227">KEY DATA POINTS · SCRIPTED DEMONSTRATION (ILLUSTRATIVE)</text>
+<text x="90" y="430" font-size="72" font-weight="700" fill="#1B9AAA">4 lines</text><text x="90" y="472" font-size="27" fill="#22303A">Role · Output · Do-Nots · Signal — the whole contract</text><text x="90" y="580" font-size="72" font-weight="700" fill="#1B9AAA">3 flags</text><text x="90" y="622" font-size="27" fill="#22303A">on the bad contract: missing Do-Nots, vague output, weak signal</text><text x="90" y="730" font-size="72" font-weight="700" fill="#1B9AAA">0 flags</text><text x="90" y="772" font-size="27" fill="#22303A">on the good contract — it runs; the other never executes</text><text x="90" y="880" font-size="72" font-weight="700" fill="#1B9AAA">1 typed signal</text><text x="90" y="922" font-size="27" fill="#22303A">EXTRACTION COMPLETE ends the run — never a prose word</text>
+<rect x="60" y="1040" width="1080" height="240" fill="#1A1A2E"/>
+<text x="90" y="1100" font-size="26" letter-spacing="3" fill="#C9A227">THE CTO CONCLUSION</text>
+<text x="90" y="1155" font-size="31" fill="#FFFFFF">Agent incidents are contract incidents.</text>
+<text x="90" y="1200" font-size="31" fill="#FFFFFF">Four lines and a checker price the risk before deployment.</text>
+<text x="90" y="1350" font-size="28" font-weight="600" fill="#1B9AAA">Adopt it as the intake gate: no contract, no run.</text>
+<text x="90" y="1450" font-size="22" fill="#66707A">Full notebook, code and evidence: github.com/GAI-Engineering/poc-learning-lab · MIT / CC BY 4.0 · Synthetic data only</text>
+</svg>
