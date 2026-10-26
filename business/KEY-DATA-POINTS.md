@@ -31,9 +31,9 @@ these only from real pilot runs, never by editing this file's labels.*
 ## The executive layer
 - Infographics (business/infographics/): the SVG sources are the
   figures of record — one CTO conclusion each, drawn from the data
-  above. The NotebookLM PNG renders were WITHDRAWN 2026-10-26
-  (review E-8): their rendered text misstated figures on this page.
-  PNG renders return only after regeneration + a full human check of
-  every figure and label against this page.
+  above. PNG copies beside them are rendered FROM the SVGs
+  (SE-18, 2026-10-26). The earlier NotebookLM PNG renders were
+  WITHDRAWN 2026-10-26 (review E-8): their rendered text misstated
+  figures on this page. See business/infographics/README.md.
 - Business case: business/BUSINESS-CASE.md · Deck: business/POC-BUSINESS-CASE-DECK
 - Concept diagrams: diagrams/CONCEPT-DIAGRAMS.md · Technical flows: diagrams/TECHNICAL-FLOWS.md
