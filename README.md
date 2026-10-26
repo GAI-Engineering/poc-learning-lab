@@ -4,6 +4,9 @@ A public learning lab from **GAI Observe LLC**: fifteen proof-of-concept builds 
 
 Every notebook began as a teaching post in the series *Agents That See · Agents That Talk*. Each one names one idea worth stealing, shows a buildable POC, states its guardrail, and says plainly where it breaks.
 
+## For executives
+The business case, concept diagrams and slide deck live in `business/` and `diagrams/` — start with `business/BUSINESS-CASE.md`, see `diagrams/CONCEPT-DIAGRAMS.md`, present from `business/POC-BUSINESS-CASE-DECK.pptx`.
+
 ## The notebooks
 
 | # | Notebook | The idea to steal | Status |
