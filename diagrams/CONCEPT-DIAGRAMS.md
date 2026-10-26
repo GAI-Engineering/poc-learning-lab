@@ -5,8 +5,9 @@
 *One diagram per POC: the concept on one screen. Mermaid source — renders
 on GitHub, stays text in the repo (versionable, no binary drift). Palette:
 navy = start/deliverable · teal = process · gold = decision · strong teal =
-the headline idea · rose = the flagged path. The presentation deck carries
-rendered versions of the same three diagrams.*
+the headline idea · rose = the flagged path. Rendered versions of
+the same three diagrams are a Day 2 deck item; the current deck
+carries text flows.*
 
 ## 01 · An Agent That Sees — grounded perception + verification
 ```mermaid

@@ -6,14 +6,12 @@
 
 ## Lead with the data — the market, and the failure curve
 **The market (third-party forecasts, cited — not our numbers):**
-- Enterprise agentic AI: **USD 2.6B in 2024 → USD 24.5B by 2030**,
-  CAGR 46.2%; North America held 39% in 2024, and customer service /
-  virtual assistants were the leading application segment
-  (Grand View Research, Enterprise Agentic AI Market Report, 2025–2030).
-- Forecasts vary by definition — other firms put 2030 between ~USD 25B
-  and ~USD 53B (Omdia: USD 1.5B in 2025 → USD 41.8B in 2030 for
-  enterprise agentic AI *software*). Treat any single figure as a
-  range with a name on it, never as a promise.
+- Enterprise agentic AI: **USD 2.58B in 2024 → USD 24.5B by 2030**;
+  Grand View Research states the 46.2% CAGR for 2025–2030
+  (Enterprise Agentic AI Market Report, 2025–2030).
+- Forecasts vary by definition and scope — Omdia's software-only
+  forecast is USD 1.5B in 2025 → USD 41.8B in 2030. Treat any single
+  figure as a named estimate, never as a promise.
 - Adoption: Gartner (Aug 2025) predicts **40% of enterprise
   applications will feature task-specific AI agents by end of 2026**,
   up from under 5% in 2025; by 2029 at least 50% of knowledge workers
@@ -21,12 +19,11 @@
 
 **The failure curve (why this lab leads with controls, not demos):**
 Gartner (June 2025) also predicts **over 40% of agentic AI projects
-will be canceled by end of 2027** — for escalating costs, unclear
-business value, and inadequate risk controls. Not model quality:
-economics and governance. The three patterns below are aimed at
-exactly those three causes — a verification loop prices value, a
-transcript-of-record is the audit control, and a linted contract is
-the cheapest risk control in the stack.
+will be canceled by end of 2027**. Gartner lists escalating costs,
+unclear business value and inadequate risk controls. The three
+patterns below address those listed causes — a verification loop
+makes value testable, a transcript-of-record is the audit trail, and
+a linted contract is a pre-runtime risk control.
 
 **Our data (separate ledger, always labelled):** everything this lab
 has produced so far is ILLUSTRATIVE — scripted demonstrations over
@@ -35,12 +32,12 @@ KEY-DATA-POINTS.md). Market figures are other people's, cited;
 pilot figures will be ours only when a real pilot runs.
 
 ## Why this lab exists, in business terms
-Most agent projects do not fail on model quality. They fail on trust:
-claims nobody can trace, state nobody can audit, and behaviour nobody
-contracted for. The three patterns in this lab are, in our assessment, among the
-cheapest effective controls for those three failure modes — each demonstrated by a small,
-runnable, public reference implementation an executive team can inspect
-before it funds anything.
+In our assessment, the business problem is trust: claims nobody can
+trace, state nobody can audit, and behaviour nobody contracted for.
+The three patterns in this lab are low-cost controls for those three
+failure modes — each demonstrated by a small, runnable, public
+reference implementation an executive team can inspect before it
+funds anything.
 
 **Honesty note (read first):** the Day 1 notebooks are *scripted
 demonstrations over synthetic data*, labelled ILLUSTRATIVE in this
@@ -81,11 +78,11 @@ supervisable by ordinary management tools.
 **The pattern:** no agent runs without a four-line contract — Role,
 Output, Do-Nots, Signal — checked mechanically (linted) before runtime,
 and terminated on a typed signal, never a prose word.
-**The money:** incidents with agents are disproportionately contract
-incidents: scope the agent invented, output shapes downstream systems
-could not consume, runs that never cleanly ended. A lintable contract is,
-in our assessment, the cheapest control in this field — it costs four lines and a
-checker, and it prices agent risk *before* deployment.
+**The money:** the failure mode this pattern targets is
+contract-shaped: scope the agent invented, output shapes downstream
+systems could not consume, runs that never cleanly ended. A lintable
+contract is a low-cost control — it costs four lines and a checker,
+and it surfaces agent risk *before* deployment.
 **Where it applies:**
 - Telecom & utilities: regulated customer operations, SLA extraction.
 - Banking & insurance: document extraction with explicit do-nots.
