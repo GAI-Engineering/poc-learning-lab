@@ -1,19 +1,36 @@
 ▸ GAI OBSERVE LLC · POC LEARNING LAB
 # Build Roadmap — POC Learning Lab
 
-Built in daily batches of three notebooks, 2026-10-25 → 2026-10-29, with stretch notebooks and a week-one update by 2026-10-31.
+The Lab runs on a monthly cadence (founder ruling 2026-10-27): one foundational batch per month — built, polished and validated, released into the two LinkedIn communities, then discussed two POCs a week, closing with an Innovation Week where participants build a POC for their own organisation.
 
-| Day | Date | Batch | State |
-|-----|------|-------|-------|
-| 1 | Sun 2026-10-25 | 01 An Agent That Sees · 02 Conversation Is a Coordination Primitive · 03 RODS | COMPLETE — implementations built and runs recorded; Jupyter/Colab books executed; NotebookLM study notebooks created (5 sources each); public repo live 2026-10-26 with the Day 1 tree pushed and the community announcement posted with the repo link. All material is GAI Observe original work. |
-| 2 | Mon 2026-10-26 | 04 Analyst–Executor Loop · 05 Group Chat Patterns · 06 Debate Pattern | RELEASED 2026-10-26 (release gate, with conditions — see RELEASES.md) — implementations built, runs recorded, Jupyter/Colab books executed headless (output lint clean), five-part source packs complete; live on main. Companion NotebookLM study notebooks in preparation. All figures ILLUSTRATIVE (scripted demonstrations, synthetic data). |
-| 3 | Tue 2026-10-27 | 07 Seeing in Layers · 08 Termination Is a Contract · 09 Four Ways Conversations Break | Not started |
-| 4 | Wed 2026-10-28 | 10 What Seeing Agents Get Wrong · 11 Production Rules · 12 Healthcare, End to End | Not started |
-| 5 | Thu 2026-10-29 | 13 Law and Justice · 14 Money and Social Good · 15 Choose the Framework | Not started |
-| — | Fri–Sat 2026-10-30/31 | Stretch: 16 Claims MAS evaluation · 17 A2A lineage + week-one update | Not started |
+## Month 1 — the foundational six (POCs 01–06)
 
-Daily close-out: folders committed, index updated, one announcement post, progress noted.
+| POC | Title | State |
+|-----|-------|-------|
+| 01 | An Agent That Sees | Built 2026-10-25 · released with conditions (REL-1) |
+| 02 | Conversation Is a Coordination Primitive | Built 2026-10-25 · released with conditions (REL-1) |
+| 03 | RODS — Four Lines Every Agent Needs | Built 2026-10-25 · released with conditions (REL-1) |
+| 04 | The Analyst–Executor Loop | Built 2026-10-26 · released with conditions (REL-2) |
+| 05 | Three Ways to Run a Group Chat | Built 2026-10-26 · released with conditions (REL-2) |
+| 06 | The Debate Pattern | Built 2026-10-26 · released with conditions (REL-2) |
 
-**Modes:** every POC carries a mode — INTERIM (stub: scripted demonstration, labelled INTERIM + ILLUSTRATIVE on its face, never quoted as a finding) or FINAL (end to end: no hard-coded outcome table, a live or real recorded run with its transcript stored, figures MEASURED because nobody typed the outcome in, reproducible by a reviewer). Days 1–5 ship INTERIM; the stub→end-to-end plan for POCs 01–03 is PLAN-STUB-TO-E2E (an independent reviewer replays the first end-to-end run and signs FINAL). Promotion quotes only FINAL figures as results.
+**Month 1 calendar**
+- **Oct 27–31 — polish and deep validation:** every POC data-driven (the data file is the source; no typed outcome figures), each with its own perturbation test; independent review of the full batch.
+- **Fri Oct 30 — foundational release** in both communities (orientation packages, brochures, season schedule + roadmap, the POC 01–06 shelf).
+- **Nov 2–6 — Discussion Week 1:** POC 03 + POC 04.
+- **Nov 9–13 — Discussion Week 2:** POC 02 + POC 05.
+- **Nov 16–20 — Discussion Week 3:** POC 01 + POC 06.
+- **Nov 23–27 — Innovation Week:** each participant builds a POC for their own organisation from the Month 1 patterns; community picks what gets built next.
+
+## Batch 2 — POCs 07–12 (December discussion)
+
+Built internally during November (07–09 already built as internal builds; 10–12 build in November), held off the public shelf until their cycle: discussed in December on the same rhythm. Batch 2 is not part of the Month 1 release, and 07–09 are not published as a daily batch.
+
+## Later — POCs 13–17
+
+Sector builds (13 Law and Justice · 14 Money and Social Good · 15 Choose the Framework) and the stretch pair (16 Insurance Claims MAS evaluation · 17 A2A Integration Lineage) follow Batch 2, in that order.
+
+**Modes (SE-19, founder ruling 2026-10-26):** every POC carries a mode — INTERIM (stub: scripted demonstration, labelled INTERIM + ILLUSTRATIVE on its face, never quoted as a finding) or FINAL (end to end: no hard-coded outcome table, a live or real recorded run with its transcript stored, figures MEASURED because nobody typed the outcome in, reproducible by a reviewer). Month 1 ships INTERIM; the stub→end-to-end plan for POCs 01–03 is PLAN-STUB-TO-E2E (Sam 4 replays the first end-to-end run and signs FINAL). Promotion quotes only FINAL figures as results.
 
 2026-10-26 — Lab QA fix list applied: data files hold data only, scripted demos ILLUSTRATIVE throughout, notebooks re-executed headless with full evidence tables and charts. Day 1 was released under the lab's release gate.
+2026-10-27 — Month 1 review corrections applied: this roadmap and the README index restated on the monthly cadence; POCs 01–03 made data-driven with perturbation tests (03 first, then 01, 02).
