@@ -6,4 +6,4 @@ Label: **ILLUSTRATIVE** — scripted demonstration: from `runs/run-01.txt` (exec
 - C2 (24-hour incident-notice duty): pro 8 vs con 5 → PROCEED, disagreement 0.62 — the closest fight in the set; the strongest losing argument (define 'discovery' precisely) is the one to file.
 - C3 (uncapped liability): pro 2 vs con 14 → REJECT, disagreement 0.14.
 - Termination: DEBATE COMPLETE → TERMINATION: SIGNAL.
-- Data: `data/verdicts.csv` (ILLUSTRATIVE). Chart: drawn live in the notebook from that table (ILLUSTRATIVE).
+- Input: `data/claims.csv` — the positions the run reads. Results: `runs/verdicts.csv`, written by the run itself (ILLUSTRATIVE). Chart: drawn in the notebook from the run's own results table (ILLUSTRATIVE).

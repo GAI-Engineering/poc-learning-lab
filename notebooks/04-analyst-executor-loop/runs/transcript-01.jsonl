@@ -8,5 +8,5 @@
 {"turn": 8, "speaker": "Executor", "kind": "result", "content": "[] (no rows matched - the question, not the code, is wrong)"}
 {"turn": 9, "speaker": "Analyst", "kind": "code", "content": "Attempt 5 - Monthly charges for 'gym-unused' (exact name from the totals): result = [(r['month'], r['amount']) for r in rows if r['category'] == 'gym-unused'] ..."}
 {"turn": 10, "speaker": "Executor", "kind": "result", "content": "[('2026-02', 39.0), ('2026-03', 39.0)]"}
-{"turn": 11, "speaker": "Analyst", "kind": "finding", "content": "FINDING: gym-unused totals $78.00 across Feb-Mar with no activity category in the export - the loop's top leak, traced to actual rows."}
+{"turn": 11, "speaker": "Analyst", "kind": "finding", "content": "FINDING: gym-unused totals $78.00 across 2026-02, 2026-03 with no activity category in the export - the loop's top leak, traced to actual rows."}
 {"turn": 12, "speaker": "Analyst", "kind": "signal", "content": "ANALYSIS COMPLETE"}

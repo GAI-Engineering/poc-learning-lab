@@ -18,7 +18,7 @@ APPLIED POC - HEALTHCARE
 Idea: Turn a referral letter into a booked, prepared appointment.
 Build: A selector panel: a summariser reads the letter, a matcher picks the specialty, a scheduler proposes slots; the patient confirms.
 Guardrail: Agents prepare and propose. Booking happens only on human confirmation.
-The win: One conversation replaces four phone calls - with the letter's facts intact.
+The shape of the win: one prepared pack, built from the letter in a single conversation, with the letter's facts intact. Whether that saves calls in a real service is a measurement for a live deployment - this demo claims the shape, not the saving.
 
 WHERE IT BREAKS
 - A wrong routing choice compounds downstream

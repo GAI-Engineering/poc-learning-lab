@@ -2,4 +2,4 @@ round-robin: turns=6 selector_calls=0 handoffs=0 total_calls=6 outcome=pack prep
 selector: turns=3 selector_calls=4 handoffs=0 total_calls=7 outcome=pack prepared
 swarm: turns=4 selector_calls=0 handoffs=3 total_calls=4 outcome=pack prepared
 All three modes prepared the same pack (specialty orthopaedics, 2 slots, unbooked).
-Difference is governance: turns spent, calls billed, and how traceable the path is.
+These counts are the mechanics of this script - round robin runs its sequence twice by construction and the swarm takes a verification hand-back by construction. They show what each shape does in the demo, not what a live routing mode costs or how hard a real path is to trace.

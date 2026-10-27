@@ -4,9 +4,9 @@
 **MODE: INTERIM (stub)** — scripted demonstration; figures ILLUSTRATIVE, never quoted as findings. FINAL = a complete end-to-end run (real model, recorded transcript, figures nobody typed in).
 **The idea to steal:** The Error Is the Curriculum
 
-An analyst drafts code for each question; an executor runs it in a restricted sandbox and returns the real output — or the real error — as a message. **ILLUSTRATIVE — scripted demonstration:** the analyst's five attempts are scripted for the lesson (1 ERROR on an assumed column name, 1 EMPTY from a wrong category name, 3 SUCCESS), so the attempt pattern teaches the loop; it is not a measured result. The loop's finding (an unused $78.00 charge, Feb–Mar) is computed from the synthetic export rows by the corrected code.
+An analyst drafts code for each question; an executor runs it in a teaching-only in-process executor (restricted builtins - not an isolation boundary) and returns the real output — or the real error — as a message. **ILLUSTRATIVE — scripted demonstration:** the analyst's five attempts are scripted for the lesson (1 ERROR on an assumed column name, 1 EMPTY from a wrong category name, 3 SUCCESS), so the attempt pattern teaches the loop; it is not a measured result. The loop's finding (an unused $78.00 charge, Feb–Mar) is computed from the synthetic export rows by the corrected code.
 
-- Runnable build: `poc/` — run receipt: `runs/run-01.txt` + `runs/transcript-01.jsonl`
+- Runnable build: `poc/` — run receipt: `runs/run-01.txt` + `runs/transcript-01.jsonl` · Perturbation checks: `tests/test_perturbation.py` (edit the data, watch the finding move)
 - Source pack: `sources/` (01-post · 02-poc-brief · 03-implementation · 04-run-evidence · 05-charts)
 - Data: `data/` · Charts: `charts/` (PNG in this folder; the chart also renders inside the executed notebook below). All data synthetic; demonstration outputs labelled ILLUSTRATIVE.
 - Study artifacts: a companion NotebookLM study notebook for this POC is in preparation — its link is recorded here when the notebook is verified, and the `study/` transfer follows the harvest.

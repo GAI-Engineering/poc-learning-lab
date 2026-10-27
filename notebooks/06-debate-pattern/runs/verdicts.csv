@@ -1,0 +1,4 @@
+claim,pro_strength,con_strength,verdict,disagreement
+C1,5,11,REJECT,0.45
+C2,8,5,PROCEED,0.62
+C3,2,14,REJECT,0.14

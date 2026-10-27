@@ -4,9 +4,9 @@
 **MODE: INTERIM (stub)** — scripted demonstration; figures ILLUSTRATIVE, never quoted as findings. FINAL = a complete end-to-end run (real model, recorded transcript, figures nobody typed in).
 **The idea to steal:** Choose Your Parliament
 
-One task — a synthetic referral letter turned into a prepared appointment pack — run under three routing shapes with the same three stub specialists. **ILLUSTRATIVE — scripted demonstration:** round robin spends 6 turns, the selector spends 3 turns + 4 selector calls, the swarm spends 4 turns + 3 handoffs; all three prepare the same pack, unbooked. The counts illustrate each parliament's cost structure; they are not measured results from live agents.
+One task — a synthetic referral letter turned into a prepared appointment pack — run under three routing shapes with the same three stub specialists. **ILLUSTRATIVE — scripted demonstration:** round robin spends 6 turns, the selector spends 3 turns + 4 selector calls, the swarm spends 4 turns + 3 handoffs; all three prepare the same pack, unbooked. The counts are this script's mechanics (round robin runs its sequence twice by construction; the swarm takes a verification hand-back by construction); they are not prices, and not measured results from live agents.
 
-- Runnable build: `poc/` — run receipt: `runs/run-01.txt` + one transcript per mode in `runs/`
+- Runnable build: `poc/` — run receipt: `runs/run-01.txt` + one transcript per mode in `runs/` · Perturbation + failed-router checks: `tests/test_perturbation.py`
 - Source pack: `sources/` (01-post · 02-poc-brief · 03-implementation · 04-run-evidence · 05-charts)
 - Data: `data/` · Charts: `charts/` (PNG in this folder; the chart also renders inside the executed notebook below). All data synthetic; demonstration outputs labelled ILLUSTRATIVE.
 - Study artifacts: a companion NotebookLM study notebook for this POC is in preparation — its link is recorded here when the notebook is verified, and the `study/` transfer follows the harvest.

@@ -2,5 +2,5 @@ C1: accept auto-renewal at +8% with no review window -> pro 5 vs con 11 -> REJEC
 C2: accept a 24-hour security-incident notice duty -> pro 8 vs con 5 -> PROCEED (disagreement 0.62)
 C3: accept an uncapped liability clause -> pro 2 vs con 14 -> REJECT (disagreement 0.14)
 claims=3 verdicts: C1=REJECT, C2=PROCEED, C3=REJECT
-Closest fight (highest disagreement) is where genuine uncertainty lives - file that argument.
+Closest fight: C2 (disagreement 0.62) - the most balanced argument in this scripted example. Use it as a prompt for human review: it locates no genuine uncertainty, and a real position needs independent evidence and counsel review.
 TERMINATION: SIGNAL

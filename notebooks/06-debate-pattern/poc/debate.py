@@ -4,36 +4,37 @@ A Proponent builds the strongest case for a contract position, an
 Opponent builds the strongest case against, and a Judge rules in a
 fixed, machine-readable format: PROCEED, PAUSE or REJECT, with the
 strongest point each way. Advocates never concede - the tension is
-the instrument, and the map of the fight is the risk register.
+the instrument. The map of the fight is an illustrative
+argument-balance prompt for human review: it is NOT a risk register,
+and a scripted strength ratio locates no genuine uncertainty - a
+real position requires independent evidence and counsel review.
 Deterministic stub advocates: argument strengths are scripted for the
 worked example, so verdicts are ILLUSTRATIVE. The verdict informs
 counsel; it never accepts, signs, or advises a client.
+The claims are read from data/claims.csv - the data file is the
+single source for the run; every figure below is computed from it.
 """
+import csv
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))  # repo root for kit/
 from kit.transcript import TranscriptStore
 from kit.termination import Termination
 
-# Each argument: (point, strength 1-5 as scripted for this worked example).
-CLAIMS = [
-    {"claim": "C1: accept auto-renewal at +8% with no review window",
-     "pro": [("renewal avoids a service gap at contract end", 3),
-             ("price is fixed for the renewal term", 2)],
-     "con": [("an 8% rise compounds unchecked across renewals", 4),
-             ("no review window removes the only exit checkpoint", 4),
-             ("usage may have fallen since signing - untested", 3)]},
-    {"claim": "C2: accept a 24-hour security-incident notice duty",
-     "pro": [("24 hours is achievable with the current on-call rota", 4),
-             ("fast notice materially limits incident harm", 4)],
-     "con": [("weekend discovery compresses the effective window", 2),
-             ("notice wording must define 'discovery' precisely", 3)]},
-    {"claim": "C3: accept an uncapped liability clause",
-     "pro": [("counterparty offers a 5% discount for accepting", 2)],
-     "con": [("a single incident can exceed the contract's total value", 5),
-             ("insurance cover is capped - the excess is uninsured", 5),
-             ("uncapped liability fails the organisation's own policy", 4)]},
-]
+
+def load_claims(path):
+    """Load claims from CSV (claim_id, claim, side, point, strength),
+    grouped in file order: each claim with its pro and con arguments."""
+    claims, by_id = [], {}
+    with open(path, newline="", encoding="utf-8") as fh:
+        for r in csv.DictReader(fh):
+            c = by_id.get(r["claim_id"])
+            if c is None:
+                c = {"claim": f"{r['claim_id']}: {r['claim']}", "pro": [], "con": []}
+                by_id[r["claim_id"]] = c
+                claims.append(c)
+            c[r["side"]].append((r["point"], int(r["strength"])))
+    return claims
 
 
 def judge(pro_total, con_total):
@@ -46,11 +47,15 @@ def judge(pro_total, con_total):
     return "PROCEED"
 
 
-def main():
+def run_debate(claims, max_turns=30):
+    """Run the debate. The turn budget is enforced inside the loop:
+    when the cap is hit, remaining claims go unjudged and the run
+    records CAP_TURNS. Returns (transcript, rows, terminated_by)."""
     t = TranscriptStore()
-    term = Termination(max_turns=30, signal="DEBATE COMPLETE")
+    term = Termination(max_turns=max_turns, signal="DEBATE COMPLETE")
     rows = []
-    for c in CLAIMS:
+    terminated_by = None
+    for c in claims:
         pro_total = sum(s for _, s in c["pro"])
         con_total = sum(s for _, s in c["con"])
         verdict = judge(pro_total, con_total)
@@ -64,15 +69,42 @@ def main():
         rows.append({"claim": c["claim"].split(":")[0], "pro_strength": pro_total,
                      "con_strength": con_total, "verdict": verdict,
                      "disagreement": disagreement})
-        print(f"{c['claim']} -> pro {pro_total} vs con {con_total} -> {verdict} "
-              f"(disagreement {disagreement})")
-    final = "DEBATE COMPLETE"
-    t.append("Judge", "signal", final)
-    out = Path(__file__).resolve().parents[1] / "runs" / "debate-01.jsonl"
+        if term.check(verdict) == "CAP_TURNS":
+            terminated_by = "CAP_TURNS"
+            t.append("Judge", "termination",
+                     f"turn budget {max_turns} reached - remaining claims unjudged")
+            break
+    if terminated_by is None:
+        final = "DEBATE COMPLETE"
+        t.append("Judge", "signal", final)
+        terminated_by = term.check(final) or "SIGNAL"
+    return t, rows, terminated_by
+
+
+def main():
+    base = Path(__file__).resolve().parents[1]
+    claims = load_claims(base / "data" / "claims.csv")
+    t, rows, terminated_by = run_debate(claims)
+    out = base / "runs" / "debate-01.jsonl"
     t.save_jsonl(out)
-    print(f"claims=3 verdicts: " + ", ".join(f"{r['claim']}={r['verdict']}" for r in rows))
-    print("Closest fight (highest disagreement) is where genuine uncertainty lives - file that argument.")
-    print("TERMINATION:", term.check(final))
+    with open(base / "runs" / "verdicts.csv", "w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(["claim", "pro_strength", "con_strength", "verdict", "disagreement"])
+        for r in rows:
+            w.writerow([r["claim"], r["pro_strength"], r["con_strength"], r["verdict"],
+                        r["disagreement"]])
+    for c, r in zip(claims, rows):
+        print(f"{c['claim']} -> pro {r['pro_strength']} vs con {r['con_strength']} -> "
+              f"{r['verdict']} (disagreement {r['disagreement']})")
+    print(f"claims={len(rows)} verdicts: " +
+          ", ".join(f"{r['claim']}={r['verdict']}" for r in rows))
+    if rows:
+        closest = max(rows, key=lambda r: r["disagreement"])
+        print(f"Closest fight: {closest['claim']} (disagreement {closest['disagreement']}) - the "
+              "most balanced argument in this scripted example. Use it as a prompt for human "
+              "review: it locates no genuine uncertainty, and a real position needs independent "
+              "evidence and counsel review.")
+    print("TERMINATION:", terminated_by)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,14 @@
+claim_id,claim,side,point,strength
+C1,accept auto-renewal at +8% with no review window,pro,renewal avoids a service gap at contract end,3
+C1,accept auto-renewal at +8% with no review window,pro,price is fixed for the renewal term,2
+C1,accept auto-renewal at +8% with no review window,con,an 8% rise compounds unchecked across renewals,4
+C1,accept auto-renewal at +8% with no review window,con,no review window removes the only exit checkpoint,4
+C1,accept auto-renewal at +8% with no review window,con,usage may have fallen since signing - untested,3
+C2,accept a 24-hour security-incident notice duty,pro,24 hours is achievable with the current on-call rota,4
+C2,accept a 24-hour security-incident notice duty,pro,fast notice materially limits incident harm,4
+C2,accept a 24-hour security-incident notice duty,con,weekend discovery compresses the effective window,2
+C2,accept a 24-hour security-incident notice duty,con,notice wording must define 'discovery' precisely,3
+C3,accept an uncapped liability clause,pro,counterparty offers a 5% discount for accepting,2
+C3,accept an uncapped liability clause,con,a single incident can exceed the contract's total value,5
+C3,accept an uncapped liability clause,con,insurance cover is capped - the excess is uninsured,5
+C3,accept an uncapped liability clause,con,uncapped liability fails the organisation's own policy,4
