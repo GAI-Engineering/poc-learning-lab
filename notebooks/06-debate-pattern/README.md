@@ -10,7 +10,7 @@ Two advocates who never concede argue three synthetic contract positions; a judg
 - Source pack: `sources/` (01-post · 02-poc-brief · 03-implementation · 04-run-evidence · 05-charts)
 - Data: `data/` · Charts: `charts/` (PNG in this folder; the chart also renders inside the executed notebook below). All data synthetic; demonstration outputs labelled ILLUSTRATIVE.
 - Study artifacts: a companion NotebookLM study notebook for this POC is in preparation — its link is recorded here when the notebook is verified, and the `study/` transfer follows the harvest.
-- Status: released 2026-10-26 under the lab's release gate (REL-2, released with conditions) — live on the main branch.
+- Status: released 2026-10-26 under the lab's release gate, with conditions — live on the main branch. Release record: RELEASES.md at the repo root.
 
 **▸ GAI OBSERVE LLC · POC Learning Lab**
 
@@ -18,4 +18,4 @@ Two advocates who never concede argue three synthetic contract positions; a judg
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GAI-Engineering/poc-learning-lab/blob/main/notebooks/06-debate-pattern/06-debate-pattern.ipynb)
 
-Runnable Jupyter book for this POC: `06-debate-pattern.ipynb` in this folder — self-contained, executed end-to-end locally with the recorded outputs in place (the Colab badge below is live — this book is published on the main branch). Pipeline: NotebookLM notebook (knowledge + study materials) -> decks/video -> this Colab book, enriched from the NotebookLM harvest in the next stage.
+Runnable Jupyter book for this POC: `06-debate-pattern.ipynb` in this folder — self-contained, executed end-to-end locally with the recorded outputs in place (its Colab badge is live — this book is published on the main branch). Pipeline: NotebookLM notebook (knowledge + study materials) -> decks/video -> this Colab book, enriched from the NotebookLM harvest in the next stage.
