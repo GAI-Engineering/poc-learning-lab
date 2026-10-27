@@ -6,7 +6,7 @@ class Termination:
         self.turns = 0
     def check(self, text):
         self.turns += 1
-        if self.signal and text.strip().endswith(self.signal):
+        if self.signal and text.strip() == self.signal:
             return "SIGNAL"
         if self.turns >= self.max_turns:
             return "CAP_TURNS"

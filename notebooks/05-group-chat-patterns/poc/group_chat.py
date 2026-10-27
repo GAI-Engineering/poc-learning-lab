@@ -85,8 +85,12 @@ def run_selector(letter, chooser=choose_next, max_turns=MAX_TURNS):
         t.append("Selector", "route", f"next speaker: {nxt}")
         t.append(nxt, "turn", AGENTS[nxt](state))
     else:
-        t.append("Selector", "termination",
-                 f"turn cap {max_turns} reached - router never finished; run INCOMPLETE")
+        # The cap was reached. The run is INCOMPLETE only if work
+        # genuinely remains: a run that completed exactly at the cap
+        # (the chooser has no next speaker) is complete, not capped.
+        if chooser(state) is not None:
+            t.append("Selector", "termination",
+                     f"turn cap {max_turns} reached - router never finished; run INCOMPLETE")
     return t, finish(state), {"selector_calls": selector_calls, "handoffs": 0}
 
 

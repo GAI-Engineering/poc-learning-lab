@@ -73,10 +73,12 @@ def analyse(rows, max_turns=20):
     t = TranscriptStore()
     term = Termination(max_turns=max_turns, signal="ANALYSIS COMPLETE")
     attempts = []
+    outputs = {}
     terminated_by = None
     for i, (question, code) in enumerate(ATTEMPTS, start=1):
         t.append("Analyst", "code", f"Attempt {i} - {question}: {code.splitlines()[0]} ...")
         ok, out = run_executor(code, rows)
+        outputs[question] = out if ok else None
         if not ok:
             outcome = "ERROR"
             t.append("Executor", "error", out)
@@ -92,15 +94,22 @@ def analyse(rows, max_turns=20):
             t.append("Executor", "termination",
                      f"turn budget {max_turns} reached - loop stopped mid-run")
             break
-    by_question = {q: c for q, c in ATTEMPTS}
-    if LEAK_QUESTION in by_question and TOTALS_QUESTION in by_question:
-        leak_ok, leak_rows = run_executor(by_question[LEAK_QUESTION], rows)
-        leak_total = round(sum(a for _, a in leak_rows), 2) if leak_ok else 0.0
-        months = ", ".join(sorted({m for m, _ in leak_rows})) if leak_ok else ""
+    # The finding is drawn ONLY from outputs recorded by attempts that
+    # actually executed in this loop - never by re-running code after
+    # the fact. A run that ended before the totals/leak attempts
+    # produced results (cap, error, empty) reports no finding.
+    scripted = {q for q, _ in ATTEMPTS}
+    if TOTALS_QUESTION not in scripted or LEAK_QUESTION not in scripted:
+        finding = "FINDING: unavailable - the totals/leak attempts were removed from this run."
+    elif not outputs.get(TOTALS_QUESTION) or not outputs.get(LEAK_QUESTION):
+        finding = ("FINDING: unavailable - the totals/leak attempts did not both produce "
+                   "results in this run.")
+    else:
+        leak_rows = outputs[LEAK_QUESTION]
+        leak_total = round(sum(a for _, a in leak_rows), 2)
+        months = ", ".join(sorted({m for m, _ in leak_rows}))
         finding = (f"FINDING: gym-unused totals ${leak_total:.2f} across {months} with no activity "
                    "category in the export - the loop's top leak, traced to actual rows.")
-    else:
-        finding = "FINDING: unavailable - the totals/leak attempts were removed from this run."
     t.append("Analyst", "finding", finding)
     if terminated_by is None:
         final = "ANALYSIS COMPLETE"

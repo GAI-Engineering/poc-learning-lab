@@ -10,6 +10,8 @@ def parse_rods(text):
         for f in FIELDS:
             if stripped.lower().startswith(f.lower() + ":"):
                 matched = f
+                if f in contract:
+                    raise ValueError(f"duplicate field in contract: {f}")
                 contract[f] = stripped.split(":", 1)[1].strip()
                 break
         if not matched and current and stripped:

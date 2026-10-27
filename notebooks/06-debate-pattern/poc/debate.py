@@ -59,9 +59,10 @@ def run_debate(claims, max_turns=30):
         pro_total = sum(s for _, s in c["pro"])
         con_total = sum(s for _, s in c["con"])
         verdict = judge(pro_total, con_total)
-        disagreement = round(min(pro_total, con_total) / max(pro_total, con_total), 2)
-        strongest_pro = max(c["pro"], key=lambda a: a[1])[0]
-        strongest_con = max(c["con"], key=lambda a: a[1])[0]
+        top = max(pro_total, con_total)
+        disagreement = round(min(pro_total, con_total) / top, 2) if top else 0.0
+        strongest_pro = max(c["pro"], key=lambda a: a[1])[0] if c["pro"] else "(no argument recorded)"
+        strongest_con = max(c["con"], key=lambda a: a[1])[0] if c["con"] else "(no argument recorded)"
         t.append("Proponent", "case", f"{c['claim']} - FOR: {strongest_pro} (total {pro_total})")
         t.append("Opponent", "case", f"{c['claim']} - AGAINST: {strongest_con} (total {con_total})")
         t.append("Judge", "verdict",
