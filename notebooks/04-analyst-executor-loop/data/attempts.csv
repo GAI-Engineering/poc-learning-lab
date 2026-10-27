@@ -1,6 +1,0 @@
-attempt,stage,outcome
-1,totals by category (assumed key 'amt'),ERROR
-2,print schema first,SUCCESS
-3,totals by category (key 'amount'),SUCCESS
-4,monthly charges for 'gym',EMPTY
-5,monthly charges for 'gym-unused',SUCCESS
