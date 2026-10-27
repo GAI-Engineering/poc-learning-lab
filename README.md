@@ -7,6 +7,8 @@ A public learning lab from **GAI Observe LLC**: fifteen proof-of-concept builds 
 
 Every notebook began as a teaching post in the series *Agents That See · Agents That Talk*. Each one names one idea worth stealing, shows a buildable POC, states its guardrail, and says plainly where it breaks.
 
+**Disclosure:** the notebooks, posts and study text in this lab were produced with AI assistance, working from the recorded run evidence in each folder; every figure is checked against that evidence before release.
+
 ## For executives
 The business case, concept diagrams and slide deck live in `business/` and `diagrams/` — start with `business/BUSINESS-CASE.md`, see `diagrams/CONCEPT-DIAGRAMS.md`, present from `business/POC-BUSINESS-CASE-DECK.pptx`.
 
@@ -17,9 +19,9 @@ The business case, concept diagrams and slide deck live in `business/` and `diag
 | 01 | An Agent That Sees | The Confidence Map | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ in NotebookLM — a Google sign-in is required to view them); live on GitHub since 2026-10-26 (see ROADMAP) |
 | 02 | Conversation Is a Coordination Primitive | The Transcript Is the Database | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ in NotebookLM — a Google sign-in is required to view them); live on GitHub since 2026-10-26 (see ROADMAP) |
 | 03 | RODS: Four Lines Every Agent Needs | Contracts Before Capabilities | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ in NotebookLM — a Google sign-in is required to view them); live on GitHub since 2026-10-26 (see ROADMAP) |
-| 04 | The Analyst–Executor Loop | The Error Is the Curriculum | Planned — Day 2 |
-| 05 | Three Ways to Run a Group Chat | Choose Your Parliament | Planned — Day 2 |
-| 06 | The Debate Pattern | Disagreement Is a Sensor | Planned — Day 2 |
+| 04 | The Analyst–Executor Loop | The Error Is the Curriculum | Built + run recorded 2026-10-26; released 2026-10-26 (REL-2, with conditions); companion study notebook in preparation |
+| 05 | Three Ways to Run a Group Chat | Choose Your Parliament | Built + run recorded 2026-10-26; released 2026-10-26 (REL-2, with conditions); companion study notebook in preparation |
+| 06 | The Debate Pattern | Disagreement Is a Sensor | Built + run recorded 2026-10-26; released 2026-10-26 (REL-2, with conditions); companion study notebook in preparation |
 | 07 | Seeing in Layers | Perception Is an Appeals Court | Planned — Day 3 |
 | 08 | Termination Is a Contract | Every Conversation Is a Loan | Planned — Day 3 |
 | 09 | Four Ways Conversations Break | Success Theatre | Planned — Day 3 |

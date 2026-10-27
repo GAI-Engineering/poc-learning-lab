@@ -1,0 +1,4 @@
+mode,agent_turns,selector_calls,handoffs,total_calls,outcome
+round-robin,6,0,0,6,pack prepared
+selector,3,4,0,7,pack prepared
+swarm,4,0,3,4,pack prepared

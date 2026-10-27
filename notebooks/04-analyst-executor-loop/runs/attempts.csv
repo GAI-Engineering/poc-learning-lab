@@ -1,0 +1,6 @@
+attempt,stage,outcome
+1,Total spend by category,ERROR
+2,Print the schema first (the recovery habit),SUCCESS
+3,Total spend by category (revised: key is 'amount'),SUCCESS
+4,Monthly charges for category 'gym',EMPTY
+5,Monthly charges for 'gym-unused' (exact name from the totals),SUCCESS

@@ -1,0 +1,7 @@
+{
+  "patient": "Patient A (synthetic)",
+  "referrer": "GP practice (synthetic)",
+  "reason": "persistent knee pain, 6 weeks, physio completed without improvement",
+  "requested": "orthopaedics assessment",
+  "urgency": "routine"
+}

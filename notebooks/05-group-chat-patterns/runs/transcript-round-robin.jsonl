@@ -1,0 +1,6 @@
+{"turn": 1, "speaker": "Summariser", "kind": "turn", "content": "summary written"}
+{"turn": 2, "speaker": "Matcher", "kind": "turn", "content": "specialty = orthopaedics"}
+{"turn": 3, "speaker": "Scheduler", "kind": "turn", "content": "slots proposed: ['Tue 09:30', 'Wed 14:10'] (unbooked - awaiting human confirmation)"}
+{"turn": 4, "speaker": "Summariser", "kind": "turn", "content": "summary written"}
+{"turn": 5, "speaker": "Matcher", "kind": "turn", "content": "specialty = orthopaedics"}
+{"turn": 6, "speaker": "Scheduler", "kind": "turn", "content": "slots proposed: ['Tue 09:30', 'Wed 14:10'] (unbooked - awaiting human confirmation)"}

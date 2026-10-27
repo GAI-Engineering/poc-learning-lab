@@ -1,0 +1,10 @@
+{"turn": 1, "speaker": "Proponent", "kind": "case", "content": "C1: accept auto-renewal at +8% with no review window - FOR: renewal avoids a service gap at contract end (total 5)"}
+{"turn": 2, "speaker": "Opponent", "kind": "case", "content": "C1: accept auto-renewal at +8% with no review window - AGAINST: an 8% rise compounds unchecked across renewals (total 11)"}
+{"turn": 3, "speaker": "Judge", "kind": "verdict", "content": "REJECT | strongest for: renewal avoids a service gap at contract end | strongest against: an 8% rise compounds unchecked across renewals"}
+{"turn": 4, "speaker": "Proponent", "kind": "case", "content": "C2: accept a 24-hour security-incident notice duty - FOR: 24 hours is achievable with the current on-call rota (total 8)"}
+{"turn": 5, "speaker": "Opponent", "kind": "case", "content": "C2: accept a 24-hour security-incident notice duty - AGAINST: notice wording must define 'discovery' precisely (total 5)"}
+{"turn": 6, "speaker": "Judge", "kind": "verdict", "content": "PROCEED | strongest for: 24 hours is achievable with the current on-call rota | strongest against: notice wording must define 'discovery' precisely"}
+{"turn": 7, "speaker": "Proponent", "kind": "case", "content": "C3: accept an uncapped liability clause - FOR: counterparty offers a 5% discount for accepting (total 2)"}
+{"turn": 8, "speaker": "Opponent", "kind": "case", "content": "C3: accept an uncapped liability clause - AGAINST: a single incident can exceed the contract's total value (total 14)"}
+{"turn": 9, "speaker": "Judge", "kind": "verdict", "content": "REJECT | strongest for: counterparty offers a 5% discount for accepting | strongest against: a single incident can exceed the contract's total value"}
+{"turn": 10, "speaker": "Judge", "kind": "signal", "content": "DEBATE COMPLETE"}
