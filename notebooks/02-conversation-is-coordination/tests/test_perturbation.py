@@ -10,7 +10,10 @@ Run: python3 tests/test_perturbation.py  (exit 0 = all checks pass)
    from the copy must remove Finding 2 (3x in March becomes 2x).
    A finding that survives its own data being removed was never
    computed from the data.
-3. Base data reproduces the recorded findings exactly.
+3. Count-up perturbation (verdict condition C3): adding a fourth
+   March coffee-subscription row must move Finding 2 to 'billed 4x'.
+   A build that types '3x' fails here.
+4. Base data reproduces the recorded findings exactly.
 """
 import sys
 from pathlib import Path
@@ -58,7 +61,15 @@ if any("coffee-subscription billed" in f for f in trimmed_findings):
 if len(trimmed_findings) != 2:
     fails.append("trimming one coffee row changed more than Finding 2")
 
+# 3. A fourth March coffee row moves Finding 2 to 4x.
+extended = tx + [("2026-03", "coffee-subscription", 14.99)]
+_, extended_findings = cv.compute_findings(extended)
+f2 = next((f for f in extended_findings if "coffee-subscription billed" in f), "")
+print("extended finding 2:", f2)
+if "billed 4x in March vs 2x in Jan/Feb" not in f2:
+    fails.append("adding a fourth March coffee row did not move Finding 2 to 4x - the count is not computed")
+
 if fails:
     print("FAIL:", *fails, sep="\n  ")
     sys.exit(1)
-print("PASS: amount perturbation moves the finding; removing the data removes the finding")
+print("PASS: amount perturbation moves the finding; removing the data removes the finding; the count is computed")

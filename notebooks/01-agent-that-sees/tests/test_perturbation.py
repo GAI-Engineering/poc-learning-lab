@@ -12,6 +12,9 @@ the POC's own loader, so the module's computation is what is tested:
 2. Confidence perturbation: raising a GUESS claim's confidence above
    the 0.60 threshold in the CSV must flip its derived flag to
    GROUNDED. The flag is computed at load, not stored.
+3. Reverse perturbation (verdict condition C2): dropping a GROUNDED
+   claim's confidence below 0.60 in the CSV must flip its derived
+   flag to GUESS. A build that types every flag GROUNDED fails here.
 """
 import sys
 from pathlib import Path
@@ -46,7 +49,16 @@ print(f"raised: confidence={row['confidence']} flag={row['flag']}")
 if row["flag"] != "GROUNDED":
     fails.append("raising a confidence over 0.60 did not flip the derived flag")
 
+# 3. Drop a GROUNDED confidence below the threshold in the CSV text
+t3 = text.replace("pavement slab,0.97,GROUNDED,True",
+                  "pavement slab,0.50,GROUNDED,True")
+assert t3 != text, "perturbation 3 did not apply to the CSV text"
+row3 = next(r for r in sees.parse_claims(t3) if r["claim"] == "pavement slab")
+print(f"dropped: confidence={row3['confidence']} flag={row3['flag']}")
+if row3["flag"] != "GUESS":
+    fails.append("dropping a confidence below 0.60 did not flip the derived flag to GUESS")
+
 if fails:
     print("FAIL:", *fails, sep="\n  ")
     sys.exit(1)
-print("PASS: verification perturbation moves the survival rate; the flag is derived from confidence")
+print("PASS: verification perturbation moves the survival rate; the flag is derived from confidence in both directions")
