@@ -20,8 +20,8 @@
 **The failure curve (why this lab leads with controls, not demos):**
 Gartner (June 2025) also predicts **over 40% of agentic AI projects
 will be canceled by end of 2027**. Gartner lists escalating costs,
-unclear business value and inadequate risk controls. The three
-patterns below address those listed causes — a verification loop
+unclear business value or inadequate risk controls. The patterns
+below address those listed causes — a verification loop
 makes value testable, a transcript-of-record is the audit trail, and
 a linted contract is a pre-runtime risk control.
 
