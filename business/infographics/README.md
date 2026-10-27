@@ -8,8 +8,10 @@
   SCRIPTED DEMONSTRATION (ILLUSTRATIVE), and that label is part of
   the card.
 - The **PNG files beside them are rendered from these SVGs**
-  (LibreOffice render, 2026-10-26, review SE-18) — never from an
-  image-generation model. Lesson L-11: text rendered by an image
+  (01–03: LibreOffice render, 2026-10-26, review SE-18; 04–06:
+  cairosvg render, 2026-10-26) — never from an image-generation model.
+- Cards 04–06 (added 2026-10-26) follow the same template and the same
+  rule: figures from KEY-DATA-POINTS, read at full size after render. Lesson L-11: text rendered by an image
   model is unreliable; the earlier NotebookLM PNG renders were
   withdrawn under review E-8 because their text misstated these
   figures.

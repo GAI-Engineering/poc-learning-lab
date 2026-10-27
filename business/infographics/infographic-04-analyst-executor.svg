@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+<rect width="1200" height="1500" fill="#F7FAFA"/>
+<rect width="1200" height="170" fill="#1A1A2E"/>
+<rect y="170" width="1200" height="8" fill="#C9A227"/>
+<text x="90" y="85" font-size="34" letter-spacing="4" fill="#C9A227">GAI OBSERVE LLC · POC LEARNING LAB</text>
+<text x="90" y="140" font-size="30" fill="#FFFFFF">POC 04 · CTO CONCLUSIONS</text>
+<text x="90" y="265" font-size="47" font-weight="700" fill="#1A1A2E">The Error Is the Curriculum</text>
+<text x="90" y="325" font-size="29" fill="#22303A">Five attempts, typed outcomes, one finding traced to the rows</text>
+<text x="90" y="366" font-size="24" letter-spacing="3" fill="#C9A227">KEY DATA POINTS · SCRIPTED DEMONSTRATION (ILLUSTRATIVE)</text>
+<text x="90" y="452" font-size="72" font-weight="700" fill="#1B9AAA">5 attempts</text><text x="90" y="494" font-size="27" fill="#22303A">every one typed — 1 ERROR · 1 EMPTY · 3 SUCCESS, from the run record</text>
+<text x="90" y="580" font-size="72" font-weight="700" fill="#1B9AAA">2 failure kinds</text><text x="90" y="622" font-size="27" fill="#22303A">ERROR = the code was wrong · EMPTY = the question was — routed apart</text>
+<text x="90" y="730" font-size="72" font-weight="700" fill="#1B9AAA">$78.00 found</text><text x="90" y="772" font-size="27" fill="#22303A">an unused subscription, 2 x $39.00, traced to the actual rows</text>
+<text x="90" y="880" font-size="72" font-weight="700" fill="#1B9AAA">1 recovery habit</text><text x="90" y="922" font-size="27" fill="#22303A">print the schema first — the error became the next attempt's input</text>
+<rect x="60" y="1040" width="1080" height="240" fill="#1A1A2E"/>
+<text x="90" y="1100" font-size="26" letter-spacing="3" fill="#C9A227">THE CTO CONCLUSION</text>
+<text x="90" y="1155" font-size="31" fill="#FFFFFF">An agent's failures are its training data.</text>
+<text x="90" y="1200" font-size="31" fill="#FFFFFF">Price the loop by how it recovers, not by its first try.</text>
+<text x="90" y="1350" font-size="28" font-weight="600" fill="#1B9AAA">Adopt it where answers must explain themselves: type every failure.</text>
+<text x="90" y="1450" font-size="22" fill="#66707A">Full notebook, code and evidence: github.com/GAI-Engineering/poc-learning-lab · MIT / CC BY 4.0 · Synthetic data only</text>
+</svg>

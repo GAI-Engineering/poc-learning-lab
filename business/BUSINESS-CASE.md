@@ -59,6 +59,26 @@ must still touch.
 - Retail: shelf and signage audits from store photography.
 - Public sector: accessibility audits of public spaces (the demo's case).
 
+**The concept, in one diagram:**
+
+```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 28, "rankSpacing": 44, "padding": 12}}}%%
+flowchart LR
+    A["Synthetic scene<br/>regions + ground truth"]:::io --> B["Parser emits claims<br/>region + confidence"]:::proc
+    B --> C{"Confidence<br/>>= 0.60?"}:::decision
+    C -->|yes| D["GROUNDED"]:::proc
+    C -->|no| E["GUESS - flagged,<br/>not hidden"]:::warn
+    D --> F["Verification<br/>vs ground truth"]:::proc
+    E --> F
+    F --> G["Survival rate<br/>survived / total"]:::metric
+    G --> H["Confidence map<br/>the deliverable"]:::io
+    classDef io fill:#1A1A2E,stroke:#C9A227,stroke-width:2px,color:#FFFFFF;
+    classDef proc fill:#E6F4F6,stroke:#1B9AAA,stroke-width:1.5px,color:#123B40;
+    classDef decision fill:#FBF3D9,stroke:#C9A227,stroke-width:2px,color:#5A4A00;
+    classDef warn fill:#FBE9E7,stroke:#C1666B,stroke-width:1.5px,color:#6E2B26;
+    classDef metric fill:#1B9AAA,stroke:#146B76,stroke-width:2px,color:#FFFFFF;
+```
+
 ## Pattern 2 — The transcript is the system of record (POC 02)
 **The pattern:** agents coordinate only through a shared, persisted
 transcript; the transcript *is* the state — replayable, auditable,
@@ -74,6 +94,21 @@ supervisable by ordinary management tools.
 - Healthcare administration: multi-step case coordination under audit.
 - Shared services / BPO: any workflow where the client may ask "show me".
 
+**The concept, in one diagram:**
+
+```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 28, "rankSpacing": 44, "padding": 12}}}%%
+flowchart LR
+    A["Analyst<br/>asks"]:::proc --> T[("Transcript<br/>the system of record")]:::metric
+    T --> E["Executor<br/>answers from data"]:::proc
+    E --> T
+    T --> F["Findings<br/>incl. unasked-for"]:::proc
+    T --> R["Replay + audit<br/>from the transcript alone"]:::io
+    classDef io fill:#1A1A2E,stroke:#C9A227,stroke-width:2px,color:#FFFFFF;
+    classDef proc fill:#E6F4F6,stroke:#1B9AAA,stroke-width:1.5px,color:#123B40;
+    classDef metric fill:#1B9AAA,stroke:#146B76,stroke-width:2px,color:#FFFFFF;
+```
+
 ## Pattern 3 — Contract before capability (POC 03, RODS)
 **The pattern:** no agent runs without a four-line contract — Role,
 Output, Do-Nots, Signal — checked mechanically (linted) before runtime,
@@ -88,6 +123,139 @@ and it surfaces agent risk *before* deployment.
 - Banking & insurance: document extraction with explicit do-nots.
 - Legal operations: clause and obligation extraction (the demo's case).
 - Any enterprise: as the intake gate for every internal agent.
+
+**The concept, in one diagram:**
+
+```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 28, "rankSpacing": 44, "padding": 12}}}%%
+flowchart LR
+    A["Write the contract<br/>Role - Output - Do-Nots - Signal"]:::proc --> L{"Linter"}:::decision
+    L -->|flags| A
+    L -->|CLEAN| R["Agent runs<br/>extraction"]:::proc
+    R --> S["Typed signal<br/>EXTRACTION COMPLETE"]:::metric
+    S --> X["Termination check<br/>ends on the signal,<br/>never on a prose word"]:::io
+    classDef io fill:#1A1A2E,stroke:#C9A227,stroke-width:2px,color:#FFFFFF;
+    classDef proc fill:#E6F4F6,stroke:#1B9AAA,stroke-width:1.5px,color:#123B40;
+    classDef decision fill:#FBF3D9,stroke:#C9A227,stroke-width:2px,color:#5A4A00;
+    classDef metric fill:#1B9AAA,stroke:#146B76,stroke-width:2px,color:#FFFFFF;
+```
+
+## Pattern 4 — The error is the curriculum (POC 04)
+**The pattern:** an analyst agent writes code, an executor runs it, and
+every failure comes back as data the next attempt must answer. The loop
+keeps a typed outcome per attempt — ERROR (the code was wrong), EMPTY
+(the question was wrong) or SUCCESS — and ends on a typed signal.
+**The money:** the expensive failure in analytics automation is the
+*silent* wrong answer, and the second most expensive is engineers
+debugging code when the question itself was malformed. Separating
+ERROR from EMPTY routes each failure to the fix that actually applies,
+and the recovery habits the loop teaches — print the schema before you
+guess at it — are the difference between an agent that stalls and one
+that self-corrects. In the demonstration, five attempts produce one
+error, one empty result and three successes, and the finding (a $78.00
+unused-subscription leak) is traced to the actual rows behind it.
+**Where it applies:**
+- Finance operations: recurring spend and exception analysis over exports.
+- BI and reporting teams: self-service analytics with an audit trail.
+- Data migration: reconciliation queries that must explain themselves.
+- Any data team: a first-pass analyst whose work a human can replay.
+
+**The concept, in one diagram:**
+
+```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 28, "rankSpacing": 44, "padding": 12}}}%%
+flowchart LR
+    A["Question<br/>+ a data export"]:::io --> B["Analyst<br/>writes code"]:::proc
+    B --> C["Executor<br/>runs it"]:::proc
+    C --> D{"Typed outcome"}:::decision
+    D -->|ERROR| B
+    D -->|EMPTY| B
+    D -->|SUCCESS| F["Finding<br/>traced to the rows"]:::metric
+    classDef io fill:#1A1A2E,stroke:#C9A227,stroke-width:2px,color:#FFFFFF;
+    classDef proc fill:#E6F4F6,stroke:#1B9AAA,stroke-width:1.5px,color:#123B40;
+    classDef decision fill:#FBF3D9,stroke:#C9A227,stroke-width:2px,color:#5A4A00;
+    classDef warn fill:#FBE9E7,stroke:#C1666B,stroke-width:1.5px,color:#6E2B26;
+    classDef metric fill:#1B9AAA,stroke:#146B76,stroke-width:2px,color:#FFFFFF;
+```
+
+## Pattern 5 — Choose your parliament (POC 05)
+**The pattern:** the same three specialists, the same job, three ways
+to decide who speaks next — fixed rotation (round robin), a central
+selector, and peer hand-offs (swarm). Each shape is run on the same
+input and the mechanics are counted per shape: agent turns, routing
+calls, hand-offs.
+**The money:** coordination shape is a cost and control decision, not a
+fashion choice. Rotation is predictable but spends turns re-running
+the sequence; a selector pays extra routing calls to keep the path
+direct; hand-offs let specialists pull work but add verification
+hand-backs. Counting the mechanics on your own job — before choosing —
+is what turns a framework debate into an engineering estimate. The
+demonstration's counts are the mechanics of a script, not live costs;
+the transferable asset is the comparison table itself, and the
+transcript each shape leaves behind.
+**Where it applies:**
+- Contact centres: multi-specialist case handling and warm transfers.
+- Healthcare administration: referral preparation across specialties (the demo's case).
+- Service desks: triage where the next handler depends on the finding.
+- Claims operations: intake teams that hand cases between specialists.
+
+**The concept, in one diagram:**
+
+```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 28, "rankSpacing": 44, "padding": 12}}}%%
+flowchart LR
+    A["Referral letter<br/>one job"]:::io --> S{"Who speaks next?"}:::decision
+    S -->|fixed order| R["Round robin"]:::proc
+    S -->|chosen each turn| C["Selector"]:::proc
+    S -->|peer hand-off| W["Swarm"]:::proc
+    R --> T[("One transcript<br/>per mode")]:::metric
+    C --> T
+    W --> T
+    T --> P["Same pack<br/>prepared"]:::io
+    classDef io fill:#1A1A2E,stroke:#C9A227,stroke-width:2px,color:#FFFFFF;
+    classDef proc fill:#E6F4F6,stroke:#1B9AAA,stroke-width:1.5px,color:#123B40;
+    classDef decision fill:#FBF3D9,stroke:#C9A227,stroke-width:2px,color:#5A4A00;
+    classDef warn fill:#FBE9E7,stroke:#C1666B,stroke-width:1.5px,color:#6E2B26;
+    classDef metric fill:#1B9AAA,stroke:#146B76,stroke-width:2px,color:#FFFFFF;
+```
+
+## Pattern 6 — Disagreement is a sensor (POC 06)
+**The pattern:** for each position, a proponent and an opponent argue
+from the same evidence list, and a judge records the strongest point
+each way, the verdict, and how balanced the argument was. The balance
+figure is a prompt for human review — it tells reviewers where to look
+first — never a decision and never a risk register.
+**The money:** review time is the scarcest resource in any governance
+process. A structured debate converts a one-sided summary into an
+auditable record of both cases, so human reviewers spend their hour on
+the closest fight instead of re-deriving the argument from scratch. In
+the demonstration, three contract positions produce two REJECTs and
+one PROCEED, and the closest fight (0.62 balance) is exactly the item
+a reviewer should open first. A real position still requires
+independent evidence and counsel review — the pattern allocates the
+review, it does not replace it.
+**Where it applies:**
+- Contract operations: clause-by-clause review queues (the demo's case).
+- Vendor and risk assessments: structured challenge before sign-off.
+- Architecture boards: decision records that show both sides.
+- Policy exceptions: any queue where review effort must be rationed.
+
+**The concept, in one diagram:**
+
+```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 28, "rankSpacing": 44, "padding": 12}}}%%
+flowchart LR
+    A["A position<br/>to be tested"]:::io --> P["Proponent<br/>strongest case FOR"]:::proc
+    A --> O["Opponent<br/>strongest case AGAINST"]:::proc
+    P --> J["Judge<br/>both cases + balance"]:::metric
+    O --> J
+    J --> H["Human review<br/>starts at the closest fight"]:::io
+    classDef io fill:#1A1A2E,stroke:#C9A227,stroke-width:2px,color:#FFFFFF;
+    classDef proc fill:#E6F4F6,stroke:#1B9AAA,stroke-width:1.5px,color:#123B40;
+    classDef decision fill:#FBF3D9,stroke:#C9A227,stroke-width:2px,color:#5A4A00;
+    classDef warn fill:#FBE9E7,stroke:#C1666B,stroke-width:1.5px,color:#6E2B26;
+    classDef metric fill:#1B9AAA,stroke:#146B76,stroke-width:2px,color:#FFFFFF;
+```
 
 ## From demonstration to deployment — the four steps
 1. **Pattern fit (days):** pick the pattern, name the business owner and
