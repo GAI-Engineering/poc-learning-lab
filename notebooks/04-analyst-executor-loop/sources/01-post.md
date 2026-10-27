@@ -16,7 +16,7 @@ HABITS THAT MAKE IT WORK
 
 APPLIED POC - PERSONAL FINANCE
 Idea: Find the leaks in a household budget from a transaction export.
-Build: An analyst-executor pair categorises spending, charts the top leaks, and proposes three specific cuts - iterating on the real numbers.
+Build: An analyst-executor pair categorises spending, charts the top leaks, and proposes three specific cuts - iterating on the synthetic numbers.
 Guardrail: Education, not financial advice. Synthetic data only - real personal data belongs only in an isolated production runner, never in a teaching executor.
 The win: Findings trace to actual rows, not generic money tips.
 

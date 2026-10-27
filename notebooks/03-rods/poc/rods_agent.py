@@ -3,7 +3,11 @@
 A RODS-written clause analyst: role / fixed table output / do-nots /
 signal EXTRACTION COMPLETE. Uses kit.rods loader+linter and
 kit.termination signal check. Synthetic clauses only; no legal advice.
+
+The extraction table is data: the clauses live in data/extraction.csv
+and are loaded from it - edit the CSV and the run's table moves.
 """
+import csv
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
@@ -19,14 +23,15 @@ BAD_CONTRACT = """    Role: Helpful assistant.
 Output: A summary.
 Signal: Done
 """
-CLAUSES = [
-    {"clause": "C1", "party": "Supplier", "duty": "deliver monthly uptime report", "deadline": "5th business day"},
-    {"clause": "C2", "party": "Client", "duty": "pay undisputed invoices", "deadline": "30 days from invoice"},
-    {"clause": "C3", "party": "Supplier", "duty": "notify of security incidents", "deadline": "24 hours from discovery"},
-    {"clause": "C4", "party": "Both", "duty": "review service levels jointly", "deadline": "quarterly"},
-]
+
+def load_clauses(path):
+    """Load the extraction clauses (party | duty | deadline) from CSV."""
+    with open(path, newline="", encoding="utf-8") as f:
+        return [{"party": r["party"], "duty": r["duty"], "deadline": r["deadline"]}
+                for r in csv.DictReader(f)]
 
 def main():
+    base = Path(__file__).resolve().parents[1]
     contract = parse_rods(CONTRACT)
     print("CONTRACT fields:", sorted(contract.keys()))
     print("LINT good contract:", lint_rods(contract) or "CLEAN")
@@ -34,7 +39,7 @@ def main():
     term = Termination(max_turns=10, signal=contract["Signal"])
     print("| party | duty | deadline |")
     print("|---|---|---|")
-    for c in CLAUSES:
+    for c in load_clauses(base / "data" / "extraction.csv"):
         print(f"| {c['party']} | {c['duty']} | {c['deadline']} |")
     final = "EXTRACTION COMPLETE"
     print(final)
