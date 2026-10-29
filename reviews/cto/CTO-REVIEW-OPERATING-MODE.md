@@ -1,4 +1,3 @@
-<img src="../../assets/gai-observe-logo.png" alt="GAI Observe LLC" width="140">
 
 # CTO Review — Operating Mode (standing)
 ▸ GAI OBSERVE LLC · POC LEARNING LAB — public-safe process record
