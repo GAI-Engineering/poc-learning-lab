@@ -1,4 +1,3 @@
-<p align="center"><img src="assets/gai-observe-logo.png" alt="GAI Observe LLC" width="200"></p>
 <p align="center"><em>GAI OBSERVE LLC · POC LEARNING LAB</em></p>
 
 # POC Learning Lab — Agents That See · Agents That Talk
