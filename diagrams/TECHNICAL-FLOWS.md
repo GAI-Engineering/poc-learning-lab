@@ -1,4 +1,3 @@
-<img src="../assets/gai-observe-logo.png" alt="GAI Observe LLC" width="140">
 
 # Technical Flows — POC Learning Lab
 ▸ GAI OBSERVE LLC · POC LEARNING LAB — execution order, 2026-10-26
