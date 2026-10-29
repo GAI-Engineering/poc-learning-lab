@@ -1,4 +1,3 @@
-<img src="../assets/gai-observe-logo.png" alt="GAI Observe LLC" width="140">
 
 # The Business Case — POC Learning Lab
 ▸ GAI OBSERVE LLC · POC LEARNING LAB — executive brief, 2026-10-26
