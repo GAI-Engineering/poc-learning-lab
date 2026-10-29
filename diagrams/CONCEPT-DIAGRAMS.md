@@ -1,4 +1,3 @@
-<img src="../assets/gai-observe-logo.png" alt="GAI Observe LLC" width="140">
 
 # Concept Diagrams — POC Learning Lab
 ▸ GAI OBSERVE LLC · POC LEARNING LAB — overview materials, 2026-10-26
