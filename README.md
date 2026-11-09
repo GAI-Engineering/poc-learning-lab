@@ -14,7 +14,7 @@ The business case, concept diagrams and slide deck live in `business/` and `diag
 ## The notebooks
 
 | # | Notebook | The idea to steal | Status |
-| --- | -------- | ----------------- | ------ |
+|---|----------|-------------------|--------|
 | 01 | An Agent That Sees | The Confidence Map | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ in NotebookLM — a Google sign-in is required to view them); live on GitHub since 2026-10-26 (see ROADMAP) |
 | 02 | Conversation Is a Coordination Primitive | The Transcript Is the Database | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ in NotebookLM — a Google sign-in is required to view them); live on GitHub since 2026-10-26 (see ROADMAP) |
 | 03 | RODS: Four Lines Every Agent Needs | Contracts Before Capabilities | Built + run recorded 2026-10-25; notebook complete (5 sources, briefing/study guide/FAQ in NotebookLM — a Google sign-in is required to view them); live on GitHub since 2026-10-26 (see ROADMAP) |
