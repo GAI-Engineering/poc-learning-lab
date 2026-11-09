@@ -9,7 +9,7 @@ One task — a synthetic referral letter turned into a prepared appointment pack
 - Runnable build: `poc/` — run receipt: `runs/run-01.txt` + one transcript per mode in `runs/` · Perturbation + failed-router checks: `tests/test_perturbation.py`
 - Source pack: `sources/` (01-post · 02-poc-brief · 03-implementation · 04-run-evidence · 05-charts)
 - Data: `data/` · Charts: `charts/` (PNG in this folder; the chart also renders inside the executed notebook below). All data synthetic; demonstration outputs labelled ILLUSTRATIVE.
-- Study artifacts: a companion NotebookLM study notebook for this POC is in preparation — its link is recorded here when the notebook is verified, and the `study/` transfer follows the harvest.
+- Study artifacts: NotebookLM companion — https://notebook.google.com/notebook/f87f9977-bf6c-41fa-b31e-6bb8aff3bda1 (verified 2026-11-08; briefing, study guide, FAQ, slide deck, infographic; anyone-with-link, copies off).
 - Status: released 2026-10-26 under the lab's release gate, with conditions — live on the main branch. Release record: RELEASES.md at the repo root.
 
 **▸ GAI OBSERVE LLC · POC Learning Lab**
