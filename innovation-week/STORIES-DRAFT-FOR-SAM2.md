@@ -31,8 +31,9 @@ days. *(The ten minutes is part of the story, not a measurement.)*
 Amara inherits an agent that "helps with contracts". Its brief is two pages of
 prose. It once drafted advice to a client. She rewrites the brief as four lines:
 Role, Output, Do-Nots, Signal. The linter flags her first try: her signal was
-"done". She changes it to `EXTRACTION COMPLETE`. The agent never gives advice
-again, because the Do-Not says so and the output is a table.
+"done". She changes it to `EXTRACTION COMPLETE`. Now the Do-Not is written
+down, the linter checks it is there, and the output is a table a reviewer can
+scan in a minute. The contract does not enforce itself; the review queue still does.
 **Thread to pull:** a promise you can check beats a brief you have to trust.
 
 ## S4 · POC 04 · "The empty answer"
