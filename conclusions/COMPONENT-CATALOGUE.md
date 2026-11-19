@@ -1,7 +1,7 @@
 ▸ GAI OBSERVE LLC · POC LEARNING LAB
 # Component Catalogue and Dependency Map — POCs 01–06
 
-*DRAFT, 2026-11-19. Every component below was read in the source file named
+*v1.0 for independent review, 2026-11-19. Every component below was read in the source file named
 in its row. All Month 1 components are deterministic stubs or plain functions:
 no live model runs anywhere. Mode INTERIM; figures ILLUSTRATIVE.*
 

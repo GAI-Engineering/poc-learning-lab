@@ -1,7 +1,7 @@
 ▸ GAI OBSERVE LLC · POC LEARNING LAB
 # The Sub-Agent Pattern — An Introduction from POCs 01–06
 
-*DRAFT for learners, 2026-11-19. Everything here is taught from the six Month 1
+*v1.0 for learners, for independent review, 2026-11-19. Everything here is taught from the six Month 1
 builds. They are scripted demonstrations over synthetic data (mode INTERIM,
 figures ILLUSTRATIVE). No live model ran in Month 1.*
 

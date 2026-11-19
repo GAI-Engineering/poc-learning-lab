@@ -1,7 +1,7 @@
 ▸ GAI OBSERVE LLC · POC LEARNING LAB
 # Month 1 Conclusions — POCs 01–06
 
-*Status: DRAFT for review, 2026-11-19. Branch `month1-conclusions-2026-11-19`.
+*Status: v1.0 for independent review, 2026-11-19. Branch `month1-conclusions-2026-11-19`.
 Mode: every Month 1 POC is **INTERIM** (scripted demonstration, deterministic
 stubs, synthetic data). Every figure on this page is **ILLUSTRATIVE**. None is
 a field measurement. See the mode rule in `ROADMAP.md`.*

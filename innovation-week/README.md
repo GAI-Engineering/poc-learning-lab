@@ -1,7 +1,7 @@
 ▸ GAI OBSERVE LLC · POC LEARNING LAB
 # Innovation Week — Guidelines for Reusing the Month 1 Components
 
-*DRAFT, 2026-11-19. These pages are guidance, not new POCs. They set no dates
+*v1.0 for independent review, 2026-11-19. These pages are guidance, not new POCs. They set no dates
 and announce nothing; the Lab's schedule decides when and how they are used.
 Everything here builds on POCs 01–06, which are scripted demonstrations over
 synthetic data (mode INTERIM, figures ILLUSTRATIVE).*
@@ -10,6 +10,7 @@ synthetic data (mode INTERIM, figures ILLUSTRATIVE).*
 | File | Use it for |
 |---|---|
 | `README.md` (this page) | The guidelines: how to pick, combine and check components |
+| `CURRICULUM.md` | The Month 1 lessons week: five modules, two tracks, materials and checks |
 | `FOOD-FOR-THOUGHT.md` | Prompts to think with, alone or in a group |
 | `CHAINING-EXERCISES.md` | Five exercises: component A → B → C, with expected outputs and checks |
 | `chains/check_chains.py` | Runs every exercise's checks. `python innovation-week/chains/check_chains.py` |

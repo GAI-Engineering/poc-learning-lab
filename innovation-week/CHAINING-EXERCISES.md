@@ -1,7 +1,7 @@
 ▸ GAI OBSERVE LLC · POC LEARNING LAB
 # Chaining Exercises — Component A → B → C
 
-*DRAFT, 2026-11-19. Five exercises that join Month 1 components without
+*v1.0 for independent review, 2026-11-19. Five exercises that join Month 1 components without
 changing them. Every expected output below is checked by
 `chains/check_chains.py` (25 checks, last run 2026-11-19: 25 passed). All data
 is synthetic; all figures are ILLUSTRATIVE.*

@@ -1,7 +1,7 @@
 ▸ GAI OBSERVE LLC · POC LEARNING LAB
 # Combination Use and Industry Map — POCs 01–06
 
-*DRAFT, 2026-11-19. Component IDs (K1–K4, A–F) are defined in
+*v1.0 for independent review, 2026-11-19. Component IDs (K1–K4, A–F) are defined in
 `COMPONENT-CATALOGUE.md`. Each combination below is a **design pattern for
 discussion**, not a built system and not a new POC. Where a combination is
 exercised in code, it is by `innovation-week/chains/check_chains.py` (glue

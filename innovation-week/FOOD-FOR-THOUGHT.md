@@ -1,7 +1,7 @@
 ▸ GAI OBSERVE LLC · POC LEARNING LAB
 # Food for Thought — Prompts from POCs 01–06
 
-*DRAFT, 2026-11-19. Prompts to think with, not tasks with right answers.
+*v1.0 for independent review, 2026-11-19. Prompts to think with, not tasks with right answers.
 Several follow the questions each Month 1 film closed on.*
 
 ## By POC
