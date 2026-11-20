@@ -12,6 +12,13 @@ deciding who works next. Make every hand-off visible.
 **In plain words:** a team, not a genius. One person runs the meeting. Everyone
 else does one thing well. The minutes are the memory.
 
+**A picture to keep: a box of bricks.** Each Month 1 POC is one brick that does
+one job. The shared kit (`kit/transcript.py`, `kit/termination.py`,
+`kit/rods.py`) is the baseplate every brick sits on. Bricks snap together only
+on typed "studs": exact strings such as `CLEAN`, `ERROR`, `EMPTY`, `SUCCESS`,
+`GUESS`, `PROCEED`, `PAUSE`, `REJECT`. A prose word like "done" never snaps.
+This page is the instruction booklet.
+
 ## 2. Orchestrator and sub-agents
 - **Orchestrator.** Decides what happens next. It does not do the specialist work.
 - **Sub-agent.** Does one narrow job and reports back in a fixed shape.
