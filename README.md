@@ -33,6 +33,13 @@ The business case, concept diagrams and slide deck live in `business/` and `diag
 | 16 | Insurance Claims MAS — a Cross-Model Evaluation | Two models, ten claims, three flips | Later — after Batch 2 |
 | 17 | A2A and the Integration Lineage | Neutral governance is necessary, not sufficient | Later — after Batch 2 |
 
+## Month 1 conclusions and Innovation Week
+- `conclusions/` — what POCs 01–06 showed and did not show, one catalogue of their components, a dependency map, combinations and an industry map.
+- `framework/SUB-AGENT-FRAMEWORK.md` — the sub-agent pattern, taught from the six builds.
+- `innovation-week/` — guidelines, prompts and five chaining exercises (not new POCs); `python innovation-week/chains/check_chains.py` checks every expected output.
+
+All of it keeps the Month 1 labels: mode INTERIM, figures ILLUSTRATIVE.
+
 ## How to use this lab
 
 - Each folder under `notebooks/` is self-contained: a README summary, the source pack the study notebook was built from, the data tables, the charts, and three study artifacts (briefing, study guide, FAQ).
