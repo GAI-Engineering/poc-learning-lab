@@ -26,7 +26,7 @@ Films and the walkthrough deck are listed by name; use them once the Lab release
 
 ### Module 1 · What Month 1 showed (about 45 min)
 - **Read:** `conclusions/MONTH1-CONCLUSIONS.md`.
-- **Watch:** Month 1 Lessons film 1, "Six Builds, One Spine" (your track's edition).
+- **Watch:** Month 1 Lessons Film A — "Six Bricks, One Spine" (CTO track) or "Six Bricks, One Box" (Beginners track).
 - **Do:** for each POC, write one line: proved / not proved.
 - **Done when:** your six lines match the conclusions page, and you can say why no Month 1 figure is MEASURED.
 
@@ -38,15 +38,15 @@ Films and the walkthrough deck are listed by name; use them once the Lab release
 
 ### Module 3 · Stitching the parts (about 60 min)
 - **Read:** `conclusions/COMPONENT-CATALOGUE.md` (catalogue and dependency map).
-- **Walk through:** the Month 1 Chaining walkthrough deck, steps 1–8.
+- **Walk through:** the Month 1 lessons deck "Six Builds, One Spine", the walkthrough slides (chain 1 step by step, the five chains, and "break it on purpose").
 - **Run:** `python innovation-week/chains/check_chains.py`. Expect `checks=25 passed=25 failed=0`.
 - **Do:** Exercises 1 and 3 in `CHAINING-EXERCISES.md`, including both negative controls.
-- **Beginners:** follow the deck's "what you should see" panels. Running the check yourself needs Python 3 and a copy of this repository; no code changes are needed.
+- **Beginners:** follow the deck's walkthrough slides, which show what you should see at each step. Running the check yourself needs Python 3 and a copy of this repository; no code changes are needed.
 - **Done when:** you can explain why the bad contract produces 2 messages and no finding.
 
 ### Module 4 · Where it applies (about 45 min)
 - **Read:** `conclusions/COMBINATIONS-AND-INDUSTRY-MAP.md`.
-- **Watch:** Month 1 Lessons film 2, "Where the Patterns Fit" (your track's edition).
+- **Watch:** Month 1 Lessons Film B — "Build It in Your Industry" (CTO track) or "Where the Bricks Fit at Work" (Beginners track).
 - **Read:** two stories from `STORIES-DRAFT-FOR-SAM2.md` (once released in final voice).
 - **Do:** choose one sector row. Write its preconditions and its biggest risk in your own words.
 - **Done when:** your row names a person at the decision point.
@@ -60,11 +60,11 @@ Films and the walkthrough deck are listed by name; use them once the Lab release
 ## Map of materials
 | Module | Repo pages | Film | Walkthrough | Check |
 |---|---|---|---|---|
-| 1 | conclusions/MONTH1-CONCLUSIONS.md | Film 1 | — | Six proved / not-proved lines |
-| 2 | framework/SUB-AGENT-FRAMEWORK.md | Film 1 (beats 4–7) | — | Diagram from memory |
-| 3 | conclusions/COMPONENT-CATALOGUE.md, CHAINING-EXERCISES.md | — | Chaining deck | 25 of 25; two negative controls |
-| 4 | conclusions/COMBINATIONS-AND-INDUSTRY-MAP.md, stories | Film 2 | — | One sector row, with a person at the decision |
-| 5 | innovation-week/README.md, FOOD-FOR-THOUGHT.md | Film 2 (close) | — | One-page plan |
+| 1 | conclusions/MONTH1-CONCLUSIONS.md | Film A | Lessons deck, conclusions slides | Six proved / not-proved lines |
+| 2 | framework/SUB-AGENT-FRAMEWORK.md | Film A (beats 4–7) | Lessons deck, box-of-bricks slides | Diagram from memory |
+| 3 | conclusions/COMPONENT-CATALOGUE.md, CHAINING-EXERCISES.md | — | Lessons deck, walkthrough slides | 25 of 25; two negative controls |
+| 4 | conclusions/COMBINATIONS-AND-INDUSTRY-MAP.md, stories | Film B | Lessons deck, flows and value slides | One sector row, with a person at the decision |
+| 5 | innovation-week/README.md, FOOD-FOR-THOUGHT.md | Film B (close) | — | One-page plan |
 
 ## Assessment, in plain terms
 There is no test to pass and nothing to buy. The checks above are for you. If
