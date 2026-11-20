@@ -54,6 +54,24 @@ access. In production, an isolated executor (D2 is teaching-only).
 5. **Route doubt to a person.** GUESS, PAUSE, closest fight, any booking.
 6. **Keep the labels.** A combination of ILLUSTRATIVE parts is ILLUSTRATIVE.
 
+## 2a. Which failure each POC targets
+Gartner (June 2025) predicts that over 40% of agentic AI projects will be
+canceled by the end of 2027, and lists three reasons: escalating costs,
+unclear business value, inadequate risk controls (cited in
+`business/BUSINESS-CASE.md`). The map below is **our assessment, qualitative**:
+it says which reason each Month 1 POC is aimed at, not how much it helps.
+
+| POC | Escalating costs | Unclear business value | Inadequate risk controls |
+|---|---|---|---|
+| 01 · Confidence map | — | ● Primary: value becomes testable (survival rate) | ○ Supporting |
+| 02 · Transcript of record | ○ Supporting: cheaper audit and replay | — | ● Primary: the audit trail |
+| 03 · RODS contract gate | — | — | ● Primary: checked before runtime |
+| 04 · Analyst–Executor loop | ○ Supporting: effort goes to the right fix | ● Primary: no silent wrong answer (ERROR vs EMPTY) | — |
+| 05 · Routing shapes | ● Primary: coordination shape is a cost choice you can count | — | ○ Supporting: the human gate |
+| 06 · Debate | ● Primary: reviewer time goes to the closest fight first | — | ○ Supporting: both sides on the record |
+
+Each of the three reasons has at least two POCs aimed at it.
+
 ## 3. Industry application map
 *Sectors and use cases come from this repository's business case
 (`business/BUSINESS-CASE.md`) and the Month 1 film scripts' sector beats.
